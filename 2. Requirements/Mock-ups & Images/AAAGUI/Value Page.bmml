@@ -1,0 +1,74 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="979" measuredH="581" mockupW="282" mockupH="573">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="697" y="8" w="-1" h="-1" measuredW="282" measuredH="573" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bgPattern>topBlueBottom</bgPattern>
+        <model>IPhone5</model>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::PointyButton" x="730" y="467" w="-1" h="-1" measuredW="81" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <direction>left</direction>
+        <href>Record%20Page%26bm%3BRecord%20Page.bmml%26bm%3BRecord%20Page.bmml%26bm%3BRecord%20Page.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2233%2C459%2C114%2C486%22%20href%3D%22Record%2520Page.bmml%22%20alt%3D%22Record%20Page%22%20id%3D%221%22/%3E</map>
+        <newLayout>true</newLayout>
+        <text>Pervious</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Title" x="741" y="160" w="194" h="-1" measuredW="172" measuredH="23" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Your%20Current%20Value</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::TextInput" x="750" y="198" w="163" h="-1" measuredW="50" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>175Hz</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Title" x="732" y="240" w="194" h="-1" measuredW="145" measuredH="23" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Your%20ideal%20Value</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::TextInput" x="749" y="278" w="163" h="-1" measuredW="52" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>120Hz</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::ProgressBar" x="750" y="371" w="148" h="20" measuredW="100" measuredH="20" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <indeterminate>false</indeterminate>
+        <scrollBarValue>79</scrollBarValue>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="784" y="391" w="66" h="-1" measuredW="53" measuredH="21" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <text>Progress</text>
+        <textOrientation>right</textOrientation>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::RoundButton" x="798" y="326" w="39" h="37" measuredW="32" measuredH="32" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>false</bold>
+        <borderColor>6684672</borderColor>
+        <color>13369344</color>
+        <icon>volume-up%7Csmall</icon>
+        <shape>circle</shape>
+        <size>18</size>
+        <text/>
+        <underline>false</underline>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Button" x="776" y="422" w="96" h="38" measuredW="82" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Enhance%20the%20room%20Page%26bm%3BEnhance%20the%20room%20Page.bmml%26bm%3BEnhance%20the%20room%20Page.bmml%26bm%3BEnhance%20the%20room%20Page.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2279%2C414%2C175%2C452%22%20href%3D%22Enhance%2520the%2520room%2520Page.bmml%22%20alt%3D%22Enhance%20the%20room%20Page%22%20id%3D%2213%22/%3E</map>
+        <text>I%27m%20Ready</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

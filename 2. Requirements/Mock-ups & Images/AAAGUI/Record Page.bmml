@@ -1,0 +1,45 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="944" measuredH="594" mockupW="282" mockupH="573">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="662" y="21" w="-1" h="-1" measuredW="282" measuredH="573" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bgPattern>topBlueBottom</bgPattern>
+        <model>IPhone5</model>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::PointyButton" x="691" y="477" w="-1" h="-1" measuredW="81" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <direction>left</direction>
+        <href>Prepare%20Page%26bm%3BPrepare%20Page.bmml%26bm%3BPrepare%20Page.bmml%26bm%3BPrepare%20Page.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2229%2C456%2C110%2C483%22%20href%3D%22Prepare%2520Page.bmml%22%20alt%3D%22Prepare%20Page%22%20id%3D%221%22/%3E</map>
+        <newLayout>true</newLayout>
+        <text>Pervious</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Title" x="702" y="196" w="-1" h="-1" measuredW="203" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>Record%20Your%20Room</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Link" x="738" y="443" w="-1" h="-1" measuredW="128" measuredH="19" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>My%20Mic%20is%20not%20working</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::RoundButton" x="729" y="252" w="157" h="150" measuredW="132" measuredH="132" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>false</bold>
+        <borderColor>6684672</borderColor>
+        <color>13369344</color>
+        <href>Room%20Calculator%20Page%26bm%3BRoom%20Calculator%20Page.bmml%26bm%3BRoom%20Calculator%20Page.bmml%26bm%3BRoom%20Calculator%20Page.bmml</href>
+        <icon>volume-up%7Cxxlarge</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2267%2C231%2C224%2C381%22%20href%3D%22Room%2520Calculator%2520Page.bmml%22%20alt%3D%22Room%20Calculator%20Page%22%20id%3D%226%22/%3E</map>
+        <shape>circle</shape>
+        <size>18</size>
+        <text/>
+        <underline>false</underline>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
