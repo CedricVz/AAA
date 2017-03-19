@@ -27,7 +27,11 @@ public class StartScreen extends AppCompatActivity {
             }
         });
     }
+    public void room(View view){
+        String button_text;
+        button_text=((button)view.getText().toString());
 
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
