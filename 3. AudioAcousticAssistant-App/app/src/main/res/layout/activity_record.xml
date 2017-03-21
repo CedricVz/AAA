@@ -13,7 +13,7 @@
         android:text="Next"
         android:onClick="Next"
         tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="380dp" />
+        tools:layout_editor_absoluteY="461dp" />
 
     <ImageButton
         android:id="@+id/imageButton"
