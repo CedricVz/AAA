@@ -1,6 +1,7 @@
 package com.example.x15011071.audioacousticassistant_app;
 
 
+        import android.content.Intent;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
         import android.view.View;
@@ -52,5 +53,19 @@ public class RoomActivity extends AppCompatActivity {
 
 
 
+    }
+    public void Next(View view)
+    {
+        String button_text;
+        button_text=((Button)view).getText().toString();
+        if(button_text.equals("Next"))
+        {
+            Intent intent = new Intent(this,RecordActivity.class);
+            startActivity(intent);
+        }
+        else
+        {
+
+        }
     }
 }
