@@ -14,19 +14,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".RoomActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".ChooseActivity" />
+        <activity android:name=".RecordActivity" />
+        <activity android:name=".AdviceActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".splash" />
+        <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login" />
-        <activity android:name=".ChooseActivity" />
-        <activity android:name=".RecordActivity" />
-        <activity android:name=".AdviceActivity"></activity>
     </application>
 
 </manifest>
