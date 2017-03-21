@@ -72,9 +72,9 @@
             android:layout_height="wrap_content"
             android:onClick="Next"
             android:text="Next"
-            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="74dp" />
+            android:layout_marginTop="96dp" />
 
     </RelativeLayout>
 
