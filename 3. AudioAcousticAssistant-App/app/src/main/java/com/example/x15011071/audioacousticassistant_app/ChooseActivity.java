@@ -19,7 +19,7 @@ public class ChooseActivity extends AppCompatActivity {
         button_text=((Button)view).getText().toString();
         if(button_text.equals("Next"))
         {
-            Intent intent = new Intent(this,AdviceActivity.class);
+            Intent intent = new Intent(this,RoomActivity.class);
             startActivity(intent);
         }
         else

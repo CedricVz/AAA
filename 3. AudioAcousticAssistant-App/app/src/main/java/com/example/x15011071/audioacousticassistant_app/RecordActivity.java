@@ -19,7 +19,7 @@ public class RecordActivity extends AppCompatActivity {
         button_text=((Button)view).getText().toString();
         if(button_text.equals("Next"))
         {
-            Intent intent = new Intent(this,LoginActivity.class);
+            Intent intent = new Intent(this,AdviceActivity.class);
             startActivity(intent);
         }
         else
