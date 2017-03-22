@@ -20,7 +20,8 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/record"
             tools:layout_editor_absoluteX="4dp"
-            tools:layout_editor_absoluteY="-4dp" />
+            tools:layout_editor_absoluteY="-4dp"
+            android:contentDescription="" />
 
         <Button
             android:id="@+id/button3"

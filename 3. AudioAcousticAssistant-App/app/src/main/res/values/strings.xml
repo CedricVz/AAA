@@ -16,4 +16,18 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="continue_as_free_user">Continue as free user</string>
+    <string name="date_of_birth">Date Of Birth:</string>
+    <string name="email_address">Email Address:</string>
+    <string name="first_name">First Name:</string>
+    <string name="i_accept_audioaccousticassistant_s_terms_and_conditions_and_informed_consent">I accept AudioAccousticAssistant\'s Terms and Conditions and informed consent</string>
+    <string name="last_name">Last Name:</string>
+    <string name="string_last_name">Last Name:</string>
+    <string name="sign_in_register">Sign In / Register</string>
+    <string name="calculate">Calculate</string>
+    <string name="height">Height</string>
+    <string name="length">Length</string>
+    <string name="next">Next</string>
+    <string name="width">Width</string>
+    <string name="calculation">calculation</string>
 </resources>

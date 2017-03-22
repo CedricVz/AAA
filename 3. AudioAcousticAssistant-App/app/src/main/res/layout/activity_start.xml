@@ -21,7 +21,8 @@
             android:weightSum="2"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
+            android:layout_alignParentStart="true"
+            tools:ignore="RtlHardcoded,UselessParent">
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -31,21 +32,20 @@
                 android:layout_weight="1.36"
                 android:paddingBottom="0dp"
                 android:paddingTop="0dp"
-                app:srcCompat="@drawable/logo" />
+                app:srcCompat="@drawable/logo"
+                android:contentDescription=""
+                tools:ignore="ContentDescription" />
 
             <EditText
                 android:id="@+id/editText"
                 style="@android:style/Widget.DeviceDefault.EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
                 android:layout_marginTop="10dp"
                 android:background="@android:color/darker_gray"
                 android:ems="10"
                 android:fadingEdge="vertical"
-                android:hint="First Name:"
+                android:hint="@string/first_name"
                 android:inputType="textPersonName"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
@@ -59,7 +59,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@android:color/darker_gray"
                 android:ems="10"
-                android:hint="Last Name:"
+                android:hint="@string/string_last_name"
                 android:inputType="textPersonName"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
@@ -70,12 +70,10 @@
                 android:id="@+id/editText3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/button4"
                 android:layout_marginTop="10dp"
-                android:layout_toStartOf="@+id/imageView2"
                 android:background="@android:color/darker_gray"
                 android:ems="10"
-                android:hint="Email Address:"
+                android:hint="@string/email_address"
                 android:inputType="textPersonName"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
@@ -90,28 +88,25 @@
                 android:background="@android:color/darker_gray"
                 android:elevation="1dp"
                 android:ems="10"
-                android:hint="Date Of Birth:"
+                android:hint="@string/date_of_birth"
                 android:inputType="textPersonName"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
                 android:textAlignment="center"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                tools:ignore="UnusedAttribute" />
 
             <Button
                 android:id="@+id/button3"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
                 android:layout_marginEnd="0dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginTop="10dp"
-                android:elevation="12dp"
-                android:fontFamily="casual"
                 android:paddingBottom="0dp"
                 android:paddingTop="0dp"
-                android:text="Sign In /  Register"
+                android:text="@string/sign_in_register"
                 android:textColor="@android:color/black" />
 
             <Button
@@ -119,34 +114,28 @@
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginEnd="0dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginTop="0dp"
-                android:layout_weight="1.36"
-                android:elevation="12dp"
-                android:fontFamily="casual"
+                android:onClick="Next"
                 android:paddingBottom="0dp"
                 android:paddingTop="0dp"
-                android:onClick="Next"
-                android:text="Continue as free user"
-                android:textColor="@android:color/black" />
+                android:text="@string/continue_as_free_user"
+                android:textColor="@android:color/black"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
 
-            <EditText
+            <TextView
                 android:id="@+id/editText6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_weight="0.38"
+                android:layout_weight="0.50"
                 android:background="@android:color/white"
-                android:editable="false"
                 android:ems="10"
-                android:fontFamily="sans-serif-condensed"
-                android:inputType="textMultiLine"
                 android:paddingBottom="5dp"
                 android:paddingTop="2dp"
-                android:text="I accept AudioAccousticAssistant's Terms and Conditions and informed consent"
+                android:text="@string/i_accept_audioaccousticassistant_s_terms_and_conditions_and_informed_consent"
                 android:textAlignment="center" />
 
         </LinearLayout>

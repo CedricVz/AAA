@@ -7,24 +7,24 @@
 
     android:weightSum="1">
 
-    <EditText
-        android:id="@+id/editText7"
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/darker_gray"
-        android:editable="true"
-        android:ems="10"
-        android:inputType="textPersonName"
+        android:layout_gravity="center_horizontal"
+        android:background="#898989"
         android:text="CATEGORIES"
         android:textAlignment="center"
-        android:textSize="35sp" />
+        android:textColor="@android:color/white"
+        android:textSize="40dp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3"
         android:orientation="vertical"
-        android:layout_below="@+id/editText7">
+        android:layout_below="@+id/textView3">
 
         <RelativeLayout
             android:layout_width="match_parent"
