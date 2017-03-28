@@ -16,7 +16,7 @@ public class RoomActivity extends AppCompatActivity {
     TextView input3;
 
     TextView tv_result;
-
+    TextView tv_result2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +31,7 @@ public class RoomActivity extends AppCompatActivity {
         bt_calculate = (Button) findViewById(R.id.bt_calculate);
 
         tv_result = (TextView) findViewById(R.id.tv_result);
+        tv_result2 = (TextView) findViewById(R.id.tv_result2);
 
         bt_calculate.setOnClickListener(new View.OnClickListener() {
 
@@ -38,6 +39,18 @@ public class RoomActivity extends AppCompatActivity {
                 makeCalculations();
             }
         });
+    }
+    public void fets(View view){
+        TextView textView = (TextView) findViewById(R.id.tv_result2);
+        textView.setVisibility(View.VISIBLE);
+        TextView textView2 = (TextView) findViewById(R.id.tv_result);
+        textView2.setVisibility(View.INVISIBLE);
+        }
+    public void mets(View view){
+        TextView textView = (TextView) findViewById(R.id.tv_result);
+        textView.setVisibility(View.VISIBLE);
+        TextView textView2 = (TextView) findViewById(R.id.tv_result2);
+        textView2.setVisibility(View.INVISIBLE);
     }
 
     public void calculateRoom(View v){}
@@ -49,7 +62,10 @@ public class RoomActivity extends AppCompatActivity {
 
 
         double result= n1*n2*n3;
+//        double conversion = result*35.31;
+        double conversion = result*3.281;
         tv_result.setText("The result is: " + result);
+        tv_result2.setText("The result is: " + conversion);
 
 
 
