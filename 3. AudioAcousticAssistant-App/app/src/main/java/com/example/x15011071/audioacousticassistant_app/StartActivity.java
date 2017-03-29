@@ -21,16 +21,7 @@ public class StartActivity extends AppCompatActivity  {
     }
     public void Next(View view)
     {
-        String button_text;
-        button_text=((Button)view).getText().toString();
-        if(button_text.equals("Continue as free user"))
-        {
-            Intent intent = new Intent(this,ChooseActivity.class);
-            startActivity(intent);
-        }
-        else
-        {
-
-        }
+        Intent intent = new Intent(this,ChooseActivity.class);
+        startActivity(intent);
     }
 }

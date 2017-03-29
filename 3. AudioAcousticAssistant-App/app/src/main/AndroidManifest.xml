@@ -14,9 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".RoomActivity" />
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login" />
         <activity android:name=".ChooseActivity" />
         <activity android:name=".RecordActivity" />
         <activity android:name=".AdviceActivity" />

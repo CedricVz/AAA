@@ -19,26 +19,58 @@
         android:textSize="40sp"
         android:textStyle="bold" />
 
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Please Enter Room Mesurements" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/mets"
-            android:layout_width="wrap_content"
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="mets"
-            android:layout_weight="1"
-            android:text="Meters" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/fets"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="fets"
-            android:layout_weight="1"
-            android:text="Feet" />
+            <RadioButton
+                android:id="@+id/radio_Meters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="onRadioButtonClicked"
+                android:text="Meters"
+                android:textAlignment="center" />
+
+            <RadioButton
+                android:id="@+id/radio_Feet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="Feet"
+                android:textAlignment="center" />
+        </RadioGroup>
+
+        <!--<Button-->
+            <!--android:id="@+id/mets"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:elevation="0dp"-->
+            <!--android:onClick="mets"-->
+            <!--android:text="Meters" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/fets"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="fets"-->
+            <!--android:text="Feet" />-->
     </LinearLayout>
 
     <EditText
@@ -69,41 +101,35 @@
         android:textColor="@android:color/white" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/bt_calculate1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/calculate"
-        android:id="@+id/bt_calculate"
+        android:layout_gravity="center_horizontal"
         android:onClick="calculateRoom"
-        android:layout_gravity="center_horizontal" />
+        android:text="Calculate in Meteres" />
 
-    <TextView
-        android:id="@+id/tv_result"
+    <Button
+        android:id="@+id/bt_calculate2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/white" />
-
-    <TextView
-        android:id="@+id/tv_result2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/white"
-        android:visibility="invisible"/>
+        android:layout_gravity="center_horizontal"
+        android:onClick="calculateRoom2"
+        android:text="Calculate in Feet"
+        android:visibility="invisible" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnGo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="Next"
-            android:text="@string/next"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="96dp" />
+            android:layout_marginTop="96dp"
+            android:onClick="Next"
+            android:text="@string/next" />
 
     </RelativeLayout>
 

@@ -15,16 +15,7 @@ public class RecordActivity extends AppCompatActivity {
     }
     public void Next(View view)
     {
-        String button_text;
-        button_text=((Button)view).getText().toString();
-        if(button_text.equals("Next"))
-        {
-            Intent intent = new Intent(this,AdviceActivity.class);
-            startActivity(intent);
-        }
-        else
-        {
-
-        }
+        Intent intent = new Intent(this,AdviceActivity.class);
+        startActivity(intent);
     }
 }
