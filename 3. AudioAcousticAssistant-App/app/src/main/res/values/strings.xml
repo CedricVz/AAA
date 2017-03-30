@@ -30,4 +30,21 @@
     <string name="next">Next</string>
     <string name="width">Width</string>
     <string name="calculation">calculation</string>
+    <string name="calculate_in_feet">Calculate in Feet</string>
+    <string name="calculate_in_meteres">Calculate in Meteres</string>
+    <string name="feet">Feet</string>
+    <string name="meters">Meters</string>
+    <string name="please_enter_room_mesurements">Please Enter Room Mesurements</string>
+    <string name="categories">CATEGORIES</string>
+    <string name="next1">Next</string>
+    <string name="next2">Next</string>
+    <string name="next3">Next</string>
+    <string name="art_music_picture">Art music Picture</string>
+    <string name="event_picture">Event picture</string>
+    <string name="picture_of_youtube">Picture of Youtube</string>
+    <string name="next4">Next</string>
+    <string name="record_button">Record Button</string>
+    <string name="laborum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="advice_tutorials">ADVICE/TUTORIALS</string>
+    <string name="funny_punch_picture">Funny punch picture</string>
 </resources>

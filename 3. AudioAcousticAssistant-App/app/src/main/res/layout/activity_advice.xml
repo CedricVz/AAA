@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="ADVICE/TUTORIALS"
+            android:text="@string/advice_tutorials"
             android:textColor="@android:color/black"
             android:textSize="40sp"
             tools:layout_editor_absoluteX="77dp"
@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."  '
+            android:text="@string/laborum"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="124dp" />
 
@@ -37,6 +37,7 @@
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="323dp"
+            android:contentDescription="@string/funny_punch_picture"
             app:srcCompat="@drawable/youtubefun"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="137dp" />

@@ -17,7 +17,6 @@
         <activity android:name=".ChooseActivity" />
         <activity android:name=".RecordActivity" />
         <activity android:name=".AdviceActivity" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".splash" />
         <activity android:name=".StartActivity">
             <intent-filter>

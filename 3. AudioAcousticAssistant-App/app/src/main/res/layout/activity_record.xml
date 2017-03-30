@@ -18,10 +18,10 @@
             android:layout_width="match_parent"
             android:layout_height="368dp"
             android:layout_weight="1"
+            android:contentDescription="@string/record_button"
             app:srcCompat="@drawable/record"
             tools:layout_editor_absoluteX="4dp"
-            tools:layout_editor_absoluteY="-4dp"
-            android:contentDescription="" />
+            tools:layout_editor_absoluteY="-4dp" />
 
         <Button
             android:id="@+id/button3"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="Next"
-            android:text="Next"
+            android:text="@string/next4"
             tools:layout_editor_absoluteX="148dp"
             tools:layout_editor_absoluteY="461dp" />
     </LinearLayout>
