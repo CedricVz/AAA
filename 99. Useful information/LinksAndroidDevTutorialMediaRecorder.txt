@@ -1,0 +1,31 @@
+Android Dev PAge 
+https://developer.android.com/reference/android/Manifest.permission.html?q=sound%20input
+https://developer.android.com/guide/topics/sensors/sensors_position.html?q=distance%20sensor
+-----------------------------
+Tutorial Sound recorder
+https://www.youtube.com/watch?v=jcrh8C376-c
+-------------------------------
+Oracle
+http://docs.oracle.com/javase/tutorial/java/javaOO/nested.html
+----------------------------------
+Media Recorder
+https://developer.android.com/reference/android/Manifest.permission.html?q=sound%20input
+----------------------------------
+Position Sensors
+https://developer.android.com/guide/topics/sensors/sensors_position.html?q=distance%20sensor
+----------------------------------
+Decibels With phone (example code)
+http://stackoverflow.com/questions/15693990/measuring-decibels-with-mobile-phone
+------------------------------------
+Data Structures Tutorial Must watch
+https://www.youtube.com/watch?v=JvGZh_BdF-8&list=PLmkihKfSoSQCtrybqTEVRG2TJNNo2z2in
+---------------------------
+Login and Sign up using SQLite
+https://www.youtube.com/watch?v=NT1qxmqH1eM
+------------------------------
+Acoustic foam alibaba
+https://www.aliexpress.com/item/Hot-EVAAN-Acoustic-Foam-Panels-Free-Shipping-8pcs-19-6-19-6-0-78inch-Stripe-Shape/32797414232.html?spm=2114.40010308.4.30.bVjWkO
+------------------------------
+Amazon acoustic foam
+https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Dmobile&field-keywords=absortion+acoustic+foam&rh=n%3A2335752011%2Ck%3Aabsortion+acoustic+foam
+--------------------------------
