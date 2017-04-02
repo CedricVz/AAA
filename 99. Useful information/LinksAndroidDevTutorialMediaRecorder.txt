@@ -1,3 +1,6 @@
+Sending date to an activity(use for variables on category page activity)
+https://www.youtube.com/watch?v=3da_ZcvrlFo&list=PLshdtb5UWjSp0879mLeCsDQN6L73XBZTk&index=6
+------------------------------
 Android Dev PAge 
 https://developer.android.com/reference/android/Manifest.permission.html?q=sound%20input
 https://developer.android.com/guide/topics/sensors/sensors_position.html?q=distance%20sensor
