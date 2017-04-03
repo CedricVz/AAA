@@ -86,7 +86,7 @@
             android:background="@android:color/darker_gray"
             android:elevation="1dp"
             android:ems="10"
-            android:hint="Date Of Birth:"
+            android:hint="@string/date_of_birth2"
             android:inputType="textPersonName"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"

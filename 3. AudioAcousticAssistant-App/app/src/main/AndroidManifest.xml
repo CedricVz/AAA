@@ -18,7 +18,9 @@
         <activity android:name=".RecordActivity" />
         <activity android:name=".AdviceActivity" />
         <activity android:name=".splash" />
-        <activity android:name=".StartActivity">
+        <activity android:name=".StartActivity"/>
+
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
