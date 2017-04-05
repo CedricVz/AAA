@@ -1,5 +1,0 @@
-http://stackoverflow.com/questions/31880148/how-to-display-a-calculation-from-user-input-in-android-studio
-
-http://stackoverflow.com/questions/27868758/how-to-save-number-from-user-input
-
-https://www.youtube.com/playlist?list=PLshdtb5UWjSp0879mLeCsDQN6L73XBZTk
