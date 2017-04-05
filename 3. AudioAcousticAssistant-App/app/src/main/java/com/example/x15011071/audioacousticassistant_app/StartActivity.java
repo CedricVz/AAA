@@ -1,17 +1,14 @@
 package com.example.x15011071.audioacousticassistant_app;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import static android.R.attr.filter;
-
-
-public class MainActivity extends AppCompatActivity {
+public class StartActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,14 +16,14 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_start);
 
     }
     public void Next(View view)
     {
         String button_text;
         button_text=((Button)view).getText().toString();
-        if(button_text.equals("Next"))
+        if(button_text.equals("Continue as free user"))
         {
             Intent intent = new Intent(this,ChooseActivity.class);
             startActivity(intent);
@@ -37,5 +34,3 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-
-
