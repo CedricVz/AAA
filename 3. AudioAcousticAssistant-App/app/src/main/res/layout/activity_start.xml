@@ -8,11 +8,19 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
+<<<<<<< HEAD
     android:background="#020202"
 
     android:visibility="visible">
 
     <!--tools:context="com.example.user.Splash.StartActivity"-->
+=======
+    android:background="@color/colorPrimaryDark"
+
+    android:visibility="visible">
+
+    <!--tools:context="com.example.user.SplashActivity.StartActivity"-->
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
 
 
     <LinearLayout
@@ -30,12 +38,17 @@
             android:layout_height="153dp"
             android:layout_marginTop="0dp"
             android:layout_weight="1.36"
+            android:contentDescription=""
             android:paddingBottom="0dp"
             android:paddingTop="0dp"
             android:scaleType="fitXY"
+<<<<<<< HEAD
             app:srcCompat="@drawable/logo"
             android:contentDescription=""
             tools:ignore="ContentDescription" />
+=======
+            app:srcCompat="@drawable/logo" />
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
 
         <EditText
             style="@android:style/Widget.DeviceDefault.EditText"
@@ -58,7 +71,11 @@
             android:layout_marginTop="10dp"
             android:background="@android:color/darker_gray"
             android:ems="10"
+<<<<<<< HEAD
             android:hint="@string/lastname"
+=======
+            android:hint="@string/last"
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
             android:inputType="textPersonName"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
@@ -83,7 +100,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+<<<<<<< HEAD
 
+=======
+            android:background="@android:color/darker_gray"
+            android:elevation="0dp"
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
             android:ems="10"
             android:hint="@string/date_of_birth2"
             android:inputType="textPersonName"
@@ -93,11 +115,16 @@
             android:textColor="@android:color/white" />
 
         <Button
+<<<<<<< HEAD
+=======
+            android:id="@+id/button2"
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
             style="@style/Widget.AppCompat.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="0dp"
             android:layout_marginRight="0dp"
+<<<<<<< HEAD
             android:layout_marginTop="2dp"
             android:layout_weight="0.48"
             android:onClick="Next"
@@ -108,6 +135,17 @@
             android:textSize="18sp"
             android:textStyle="italic"
             tools:text="WELCOME TO BETTER AUDIO" />
+=======
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.50"
+            android:elevation="0dp"
+            android:onClick="Next"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            android:text="@string/welcome_to_better_audio"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textSize="18sp" />
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
 
         <EditText
             android:layout_width="match_parent"
@@ -116,14 +154,22 @@
             android:layout_weight="0.54"
             android:background="@android:color/white"
             android:ems="10"
+<<<<<<< HEAD
+=======
+            android:fontFamily="sans-serif"
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
             android:inputType="textMultiLine"
             android:paddingBottom="5dp"
             android:paddingTop="2dp"
             android:text="@string/consent"
             android:textAlignment="center"
+<<<<<<< HEAD
             android:textColor="@android:color/black"
             android:textSize="14sp"
             tools:text="I accept AudioAccousticAssistant's Terms and Conditions and informed consent" />
+=======
+            android:textColor="@android:color/black" />
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
 
     </LinearLayout>
 

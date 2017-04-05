@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.x15011071.audioacousticassistant_app.RecordActivity">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="551dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="match_parent"
+            android:layout_height="368dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/record_button"
+            app:srcCompat="@drawable/record"
+            tools:layout_editor_absoluteX="4dp"
+            tools:layout_editor_absoluteY="-4dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="Next"
+            android:text="@string/next4"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="461dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -4,8 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="#020202"
 
+=======
+    android:background="@color/colorPrimaryDark"
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
     android:weightSum="1">
 
     <TextView
@@ -13,7 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:background="#898989"
+        android:background="@android:color/black"
+        android:elevation="1dp"
         android:text="@string/categories"
         android:textAlignment="center"
         android:textColor="@android:color/white"
@@ -45,22 +50,37 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+<<<<<<< HEAD
                 android:contentDescription="@string/youtube"
+=======
+                android:contentDescription="@string/picture_of_youtube"
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
                 android:padding="0dp"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/tube" />
 
             <TextView
+<<<<<<< HEAD
+=======
+                android:id="@+id/textView4"
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+<<<<<<< HEAD
                 android:contentDescription="@string/youtubepic"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 tools:text="YouTube Content Creator " />
+=======
+                android:text="@string/youtube_video_creator"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
 
         </RelativeLayout>
 
@@ -82,6 +102,10 @@
                 android:textSize="50sp" />
 
             <ImageView
+<<<<<<< HEAD
+=======
+                android:id="@+id/mic"
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
@@ -92,6 +116,7 @@
                 app:srcCompat="@drawable/mic" />
 
             <TextView
+<<<<<<< HEAD
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -101,6 +126,18 @@
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 tools:text="Musician/Home Artist" />
+=======
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/black"
+                android:text="@string/home_artist"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
 
         </RelativeLayout>
 
@@ -123,8 +160,12 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
                 android:contentDescription="@string/event_picture"
                 android:scaleType="fitXY"
+<<<<<<< HEAD
                 app:srcCompat="@drawable/eventorganizer"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
@@ -134,6 +175,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/event_picture"
+=======
+                app:srcCompat="@drawable/eventorganizer" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/event"
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"

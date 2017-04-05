@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,9 +8,15 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
+<<<<<<< HEAD
 
     android:paddingTop="@dimen/activity_vertical_margin"
     android:weightSum="1">
+=======
+    android:background="@color/colorPrimaryDark"
+
+    android:paddingTop="@dimen/activity_vertical_margin">
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
 
     <EditText
         android:layout_width="wrap_content"
@@ -30,6 +37,7 @@
         android:inputType="textPersonName"
         android:text="@string/please_enter_room_mesurements"
         android:textAlignment="center"
+<<<<<<< HEAD
 
         android:textColor="#ffffff"
         android:textSize="18sp"
@@ -87,27 +95,50 @@
         <!--android:text="Feet" />-->
     </LinearLayout>
 
+=======
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="TextViewEdits" />
+
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
     <EditText
-        android:id="@+id/et_input1"
+        android:id="@+id/et_input2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
         android:background="#919191"
         android:ems="10"
-        android:hint="@string/height"
+        android:hint="@string/length"
         android:inputType="number|numberDecimal"
+<<<<<<< HEAD
         android:textAlignment="center" />
 
     <EditText
         android:id="@+id/et_input3"
+=======
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_input1"
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
         android:background="#919191"
         android:ems="10"
+<<<<<<< HEAD
         android:hint="@string/width"
         android:inputType="number|numberDecimal"
         android:textAlignment="center" />
+=======
+        android:hint="@string/height"
+        android:inputType="number|numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
 
     <EditText
         android:id="@+id/et_input2"
@@ -118,7 +149,44 @@
         android:ems="10"
         android:hint="@string/length"
         android:inputType="number|numberDecimal"
+<<<<<<< HEAD
         android:textAlignment="center" />
+=======
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/radio_Meters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:onClick="onRadioButtonClicked"
+        android:text="@string/meters"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:buttonTint="@android:color/white"
+        tools:targetApi="lollipop" />
+
+    <RadioButton
+        android:id="@+id/radio_Feet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onRadioButtonClicked"
+        android:text="@string/feet"
+        android:textAlignment="center"
+        android:buttonTint="@android:color/darker_gray"
+        tools:targetApi="lollipop" />
+
+    <Button
+        android:id="@+id/bt_calculate2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="calculateRoom2"
+        android:text="@string/calculate_in_feet"
+        android:visibility="invisible" />
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -141,6 +209,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_gravity="center_horizontal"
+<<<<<<< HEAD
             android:layout_marginTop="42dp"
             android:onClick="calculateRoom"
             android:text="@string/calculate_in_meteres" />
@@ -154,6 +223,12 @@
             android:text="@string/calculate_in_feet"
             android:visibility="invisible" />
 
+=======
+            android:layout_marginTop="25dp"
+            android:onClick="calculateRoom"
+            android:text="@string/calculate_in_meteres" />
+
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
     </RelativeLayout>
 
 </LinearLayout>

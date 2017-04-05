@@ -16,8 +16,11 @@ public class ChooseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choose);
     }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
     public void Next(View view)
     {
         Intent intent = new Intent(this,RoomActivity.class);

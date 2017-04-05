@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <resources></resources>
+=======
+<resources>
+    <color name="colorPrimary">#050505</color>
+    <color name="colorPrimaryDark">#060606</color>
+    <color name="colorAccent">#060606</color>
+</resources>
+>>>>>>> 98eb7904b482df79996cb400af08382459550dee
