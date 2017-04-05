@@ -17,6 +17,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.splash_screen);
+
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run(){
@@ -26,6 +27,7 @@ public class SplashActivity extends AppCompatActivity {
                 finish();
             }
         }, WELCOME_TIMEOUT);
+
         Thread myThread = new Thread(){
             @Override
             public void run(){
