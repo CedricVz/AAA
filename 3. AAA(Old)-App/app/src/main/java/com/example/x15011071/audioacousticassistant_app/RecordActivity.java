@@ -6,20 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ChooseActivity extends AppCompatActivity {
+public class RecordActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose);
+        setContentView(R.layout.activity_record);
     }
-
-
     public void Next(View view)
     {
-        Intent intent = new Intent(this,RoomActivity.class);
+        Intent intent = new Intent(this,AdviceActivity.class);
         startActivity(intent);
-
-
     }
 }

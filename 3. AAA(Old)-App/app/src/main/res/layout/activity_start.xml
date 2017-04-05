@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:visibility="visible"
+    android:background="@drawable/bg">
+
+    <!--tools:context="com.example.user.splash.StartActivity"-->
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="153dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1.36"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            app:srcCompat="@drawable/logo" />
+
+        <EditText
+            android:id="@+id/editText"
+            style="@android:style/Widget.DeviceDefault.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:ems="10"
+            android:fadingEdge="vertical"
+            android:hint="First Name:"
+            android:inputType="textPersonName"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:ems="10"
+            android:hint="Last Name:"
+            android:inputType="textPersonName"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:ems="10"
+            android:hint="Email Address:"
+            android:inputType="textPersonName"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
+            android:elevation="1dp"
+            android:ems="10"
+            android:hint="Date Of Birth:"
+            android:inputType="textPersonName"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="10dp"
+            android:elevation="12dp"
+            android:fontFamily="casual"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            android:text="Sign Up / Register"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1.36"
+            android:elevation="12dp"
+            android:fontFamily="casual"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            android:onClick="Next"
+            android:text="Continue as free user"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.38"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="textMultiLine"
+            android:paddingBottom="5dp"
+            android:paddingTop="2dp"
+            android:text="I accept AudioAccousticAssistant's Terms and Conditions and informed consent"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+</RelativeLayout>
