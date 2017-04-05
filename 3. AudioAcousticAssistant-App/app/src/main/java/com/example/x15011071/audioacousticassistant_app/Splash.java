@@ -4,18 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
 import com.example.x15011071.audioacousticassistant_app.R;
-import com.example.x15011071.audioacousticassistant_app.StartActivity;
 
 /**
  * Created by user on 16/03/2017.
  */
 
-public class splash extends AppCompatActivity {
+public class Splash extends AppCompatActivity {
     private static int WELCOME_TIMEOUT = 3000;
 
     @Override
@@ -28,7 +26,7 @@ public class splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run(){
-                Intent welcome = new Intent(splash.this, StartActivity.class);
+                Intent welcome = new Intent(Splash.this, StartActivity.class);
                 startActivity(welcome);
                 overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 finish();

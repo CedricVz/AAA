@@ -16,9 +16,7 @@ public class ChooseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choose);
     }
 
-    if (){
 
-    }
 
     public void Next(View view)
     {

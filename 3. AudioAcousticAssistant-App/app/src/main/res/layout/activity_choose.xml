@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#020202"
 
     android:weightSum="1">
 
@@ -17,7 +18,7 @@
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="40sp"
-        android:textStyle="bold" />
+        tools:text="CATEGORIES" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +32,6 @@
             android:layout_weight="3">
 
             <Button
-                android:id="@+id/BtnYoutube"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
@@ -43,11 +43,24 @@
                 android:textSize="50sp" />
 
             <ImageView
-                android:id="@+id/imYoutube"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="@string/picture_of_youtube"
-                app:srcCompat="@drawable/youtube" />
+                android:contentDescription="@string/youtube"
+                android:padding="0dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/tube" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:contentDescription="@string/youtubepic"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                tools:text="YouTube Content Creator " />
 
         </RelativeLayout>
 
@@ -57,7 +70,6 @@
             android:layout_weight="3">
 
             <Button
-                android:id="@+id/btnHome"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
@@ -70,14 +82,25 @@
                 android:textSize="50sp" />
 
             <ImageView
-                android:id="@+id/imHomeArtist"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:contentDescription="@string/art_music_picture"
-                app:srcCompat="@drawable/home" />
+                android:contentDescription="@string/micpic"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/mic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/black"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                tools:text="Musician/Home Artist" />
 
         </RelativeLayout>
 
@@ -87,7 +110,6 @@
             android:layout_weight="3">
 
             <Button
-                android:id="@+id/btnEvent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
@@ -99,11 +121,25 @@
                 android:textSize="50sp" />
 
             <ImageView
-                android:id="@+id/inEvent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:contentDescription="@string/event_picture"
-                app:srcCompat="@drawable/event" />
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/eventorganizer"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/event_picture"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                tools:text="Event Planning/Organising"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
 
         </RelativeLayout>
     </LinearLayout>
