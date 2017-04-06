@@ -27,17 +27,10 @@
     <string name="advice_tutorials">ADVICE/TUTORIALS</string>
     <string name="funny_punch_picture">Funny punch picture</string>
     <string name="date_of_birth2">Date Of Birth:</string>
-<<<<<<< HEAD
-    <string name="micpic">micpic</string>
     <string name="free_user">Continue as free user</string>
     <string name="youtube">youtube</string>
     <string name="youtubepic">youtubePic</string>
-    <string name="email">Email Address:</string>
-    <string name="first">First Name</string>
-    <string name="consent">I accept AudioAccousticAssistant\'s Terms and Conditions and informed consent</string>
     <string name="lastname">Last Name</string>
-    <string name="google_signin">google signin</string>
-=======
     <string name="google_signin">google signin</string>
     <string name="welcome_to_better_audio">Welcome to better audio</string>
     <string name="email">Email Address:</string>
@@ -48,5 +41,9 @@
     <string name="event">TextView</string>
     <string name="youtube_video_creator">YouTube Video Creator</string>
     <string name="micpic">micpic</string>
->>>>>>> 98eb7904b482df79996cb400af08382459550dee
+    <string name="height2">Height</string>
+    <string name="picture_of_youtube">picture_of_youtube</string>
+    <string name="audio">audio</string>
+    <string name="event_planning_organising">Event Planning/Organising</string>
+    <string name="musician_home_artist">Musician/Home Artist</string>
 </resources>
