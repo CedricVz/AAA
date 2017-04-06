@@ -46,4 +46,5 @@
     <string name="audio">audio</string>
     <string name="event_planning_organising">Event Planning/Organising</string>
     <string name="musician_home_artist">Musician/Home Artist</string>
+    <string name="logo_picture">logo picture</string>
 </resources>

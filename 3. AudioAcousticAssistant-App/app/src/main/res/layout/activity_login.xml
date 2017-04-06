@@ -1,41 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="320dp"
             android:orientation="vertical"
-            android:id="@+id/linearLayout2">
+            android:id="@+id/linearLayout2"
+            tools:ignore="UselessParent">
 
             <ImageView
                 android:id="@+id/imageView7"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/head" />
+                app:srcCompat="@drawable/head"
+                android:contentDescription=""
+                tools:ignore="ContentDescription" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="174dp"
-            android:layout_height="228dp"
-            android:orientation="vertical"
-            android:layout_below="@+id/linearLayout2"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="13dp"
-            android:layout_marginStart="13dp"
-            android:layout_marginTop="13dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true">
-
-        </LinearLayout>
     </RelativeLayout>
 
 </LinearLayout>

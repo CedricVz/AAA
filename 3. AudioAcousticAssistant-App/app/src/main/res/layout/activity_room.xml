@@ -39,35 +39,38 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#707070"
         android:orientation="horizontal">
 
         <RadioGroup
-            android:layout_width="163dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             tools:ignore="UselessParent">
 
             <RadioButton
                 android:id="@+id/radio_Meters"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
+                android:layout_weight="0.21"
+                android:checked="false"
                 android:onClick="onRadioButtonClicked"
                 android:text="@string/meters"
                 android:textAlignment="center"
                 android:textColor="#ffffff" />
 
-        </RadioGroup>
+            <RadioButton
+                android:id="@+id/radio_Feet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.31"
+                android:checked="true"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/feet"
+                android:textAlignment="center"
+                android:textColor="#ffffff" />
 
-        <RadioButton
-            android:id="@+id/radio_Feet"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onRadioButtonClicked"
-            android:text="@string/feet"
-            android:textAlignment="center"
-            android:textColor="#ffffff" />
+        </RadioGroup>
 
         <!--<Button-->
         <!--android:id="@+id/mets"-->
@@ -153,10 +156,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:visibility="invisible"
-            android:layout_marginTop="25dp"
             android:onClick="calculateRoom"
-            android:text="@string/calculate_in_meteres" />
+            android:text="@string/calculate_in_feet"
+            android:visibility="invisible"
+            android:layout_alignBaseline="@+id/bt_calculate1"
+            android:layout_alignBottom="@+id/bt_calculate1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
 
     </RelativeLayout>

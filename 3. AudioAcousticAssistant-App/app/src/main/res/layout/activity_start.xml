@@ -35,7 +35,7 @@
             android:layout_height="153dp"
             android:layout_marginTop="0dp"
             android:layout_weight="1.36"
-            android:contentDescription=" logo picture "
+            android:contentDescription="@string/logo_picture"
             android:paddingBottom="0dp"
             android:paddingTop="0dp"
             android:scaleType="fitXY"
@@ -81,6 +81,7 @@
             android:layout_height="wrap_content"
 
             android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"
             android:ems="10"
             android:hint="@string/email"
             android:inputType="textPersonName"
