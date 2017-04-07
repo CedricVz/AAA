@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\User\\Desktop\\TeamWork2\\AudioApp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\7797335e1cd47f21f6d677fc55dcc905a232aa5a\\output\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\TeamWork2\\AudioApp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\7797335e1cd47f21f6d677fc55dcc905a232aa5a\\output\\res\\layout-v11\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\TeamWork2\\AudioApp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\7797335e1cd47f21f6d677fc55dcc905a232aa5a\\output\\res\\layout-v11\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\TeamWork2\\AudioApp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_custom.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\7797335e1cd47f21f6d677fc55dcc905a232aa5a\\output\\res\\layout-v11\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\TeamWork2\\AudioApp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\7797335e1cd47f21f6d677fc55dcc905a232aa5a\\output\\res\\layout-v11\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\TeamWork2\\AudioApp\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_action.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\7797335e1cd47f21f6d677fc55dcc905a232aa5a\\output\\res\\layout-v11\\notification_media_action.xml"
+    }
+]
