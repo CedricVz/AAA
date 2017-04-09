@@ -13,18 +13,13 @@ public class ChooseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose);
     }
+
+
     public void Next(View view)
     {
-        String button_text;
-        button_text=((Button)view).getText().toString();
-        if(button_text.equals("Next"))
-        {
-            Intent intent = new Intent(this,RoomActivity.class);
-            startActivity(intent);
-        }
-        else
-        {
+        Intent intent = new Intent(this,RoomActivity.class);
+        startActivity(intent);
 
-        }
+
     }
 }

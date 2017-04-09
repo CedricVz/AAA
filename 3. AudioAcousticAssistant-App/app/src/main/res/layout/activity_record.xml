@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#020202"
+
     tools:context="com.example.x15011071.audioacousticassistant_app.RecordActivity">
 
     <LinearLayout
@@ -14,23 +16,24 @@
         tools:layout_editor_absoluteY="8dp">
 
         <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="match_parent"
-            android:layout_height="368dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/record"
-            tools:layout_editor_absoluteX="4dp"
-            tools:layout_editor_absoluteY="-4dp" />
-
-        <Button
-            android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/record_button"
+            app:srcCompat="@drawable/record"
+            tools:layout_editor_absoluteX="4dp"
+            tools:layout_editor_absoluteY="-4dp"
+            android:layout_weight="2.00" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:onClick="Next"
-            android:text="Next"
+            android:text="@string/next4"
+            android:textSize="30sp"
             tools:layout_editor_absoluteX="148dp"
-            tools:layout_editor_absoluteY="461dp" />
+            tools:layout_editor_absoluteY="461dp"
+            tools:text="NEXT" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

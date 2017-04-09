@@ -1,0 +1,7 @@
+#Fri Apr 07 14:27:49 BST 2017
+base.0=C\:\\Users\\User\\Desktop\\TeamWork2\\AudioApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_51d89841e963fcb9110e85abe63b8d4c94cda7a6
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\User\\Desktop\\TeamWork2\\AudioApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_d9e9ad807be47d17f80c57e2eaeaf6d5bfecdbf5\\classes.dex
+base.1=C\:\\Users\\User\\Desktop\\TeamWork2\\AudioApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_d9e9ad807be47d17f80c57e2eaeaf6d5bfecdbf5
+file.0=C\:\\Users\\User\\Desktop\\TeamWork2\\AudioApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_51d89841e963fcb9110e85abe63b8d4c94cda7a6\\classes.dex

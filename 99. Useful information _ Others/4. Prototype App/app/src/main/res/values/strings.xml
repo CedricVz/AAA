@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">AudioAcousticAssistant-App</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="store_picture_message">Splash</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="continue_as_free_user">Continue as free user</string>
+    <string name="date_of_birth">Date Of Birth:</string>
+    <string name="email_address">Email Address:</string>
+    <string name="first_name">First Name:</string>
+    <string name="i_accept_audioaccousticassistant_s_terms_and_conditions_and_informed_consent">I accept AudioAccousticAssistant\'s Terms and Conditions and informed consent</string>
+    <string name="last_name">Last Name:</string>
+    <string name="string_last_name">Last Name:</string>
+    <string name="sign_in_register">Sign In / Register</string>
+    <string name="calculate">Calculate</string>
+    <string name="height">Height</string>
+    <string name="length">Length</string>
+    <string name="next">Next</string>
+    <string name="width">Width</string>
+    <string name="calculation">calculation</string>
+    <string name="calculate_in_feet">Calculate in Feet</string>
+    <string name="calculate_in_meteres">Calculate in Meteres</string>
+    <string name="feet">Feet</string>
+    <string name="meters">Meters</string>
+    <string name="please_enter_room_mesurements">Please Enter Room Mesurements</string>
+    <string name="categories">CATEGORIES</string>
+    <string name="next1">Next</string>
+    <string name="next2">Next</string>
+    <string name="next3">Next</string>
+    <string name="art_music_picture">Art music Picture</string>
+    <string name="event_picture">Event picture</string>
+    <string name="picture_of_youtube">Picture of Youtube</string>
+    <string name="next4">Next</string>
+    <string name="record_button">Record Button</string>
+    <string name="laborum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="advice_tutorials">ADVICE/TUTORIALS</string>
+    <string name="funny_punch_picture">Funny punch picture</string>
+</resources>
