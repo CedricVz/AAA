@@ -1,7 +1,7 @@
-#Fri Apr 07 14:27:49 BST 2017
-base.0=C\:\\Users\\User\\Desktop\\TeamWork2\\AudioApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_51d89841e963fcb9110e85abe63b8d4c94cda7a6
+#Mon Apr 10 12:58:27 BST 2017
+base.0=C\:\\Users\\Cedric\\Desktop\\AAA-ProjectDocs\\AAA\\AudioApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_b03fe8f62bf7beeab554cab8aac64dd57b5a255c
 renamed.1=classes2.dex
 renamed.0=classes.dex
-file.1=C\:\\Users\\User\\Desktop\\TeamWork2\\AudioApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_d9e9ad807be47d17f80c57e2eaeaf6d5bfecdbf5\\classes.dex
-base.1=C\:\\Users\\User\\Desktop\\TeamWork2\\AudioApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_d9e9ad807be47d17f80c57e2eaeaf6d5bfecdbf5
-file.0=C\:\\Users\\User\\Desktop\\TeamWork2\\AudioApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_51d89841e963fcb9110e85abe63b8d4c94cda7a6\\classes.dex
+file.1=C\:\\Users\\Cedric\\Desktop\\AAA-ProjectDocs\\AAA\\AudioApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_53b455d75386c98e8491e17438c8da068ac6ea7f\\classes.dex
+base.1=C\:\\Users\\Cedric\\Desktop\\AAA-ProjectDocs\\AAA\\AudioApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_53b455d75386c98e8491e17438c8da068ac6ea7f
+file.0=C\:\\Users\\Cedric\\Desktop\\AAA-ProjectDocs\\AAA\\AudioApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_b03fe8f62bf7beeab554cab8aac64dd57b5a255c\\classes.dex
