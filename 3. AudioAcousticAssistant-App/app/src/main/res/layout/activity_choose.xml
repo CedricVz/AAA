@@ -31,6 +31,7 @@
             android:layout_weight="3">
 
             <Button
+                android:id="@+id/youtubeBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
@@ -42,6 +43,7 @@
                 android:textSize="50sp" />
 
             <ImageView
+                android:id="@+id/youtubeImg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:contentDescription="@string/picture_of_youtube"
@@ -50,7 +52,7 @@
                 app:srcCompat="@drawable/tube" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/conentCreatorTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -74,19 +76,20 @@
             android:layout_weight="3">
 
             <Button
+                android:id="@+id/homeArtistBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:background="@android:color/transparent"
 
+                android:background="@android:color/transparent"
                 android:onClick="Next"
                 android:text="@string/next2"
                 android:textColor="#00ffffff"
                 android:textSize="50sp" />
 
             <ImageView
-                android:id="@+id/mic"
+                android:id="@+id/homeArtistImg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
@@ -98,15 +101,16 @@
                 app:srcCompat="@drawable/mic" />
 
             <TextView
+                android:id="@+id/homeArtistTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:background="@android:color/black"
+                android:text="@string/musician_home_artist"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
-                android:textSize="18sp"
-                android:text="@string/musician_home_artist" />
+                android:textSize="18sp" />
 
 
         </RelativeLayout>
@@ -117,6 +121,7 @@
             android:layout_weight="3">
 
             <Button
+                android:id="@+id/eventBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
@@ -128,6 +133,7 @@
                 android:textSize="50sp" />
 
             <ImageView
+                android:id="@+id/eventImg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
@@ -139,15 +145,15 @@
                 app:srcCompat="@drawable/eventorganizer" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/eventTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/event_planning_organising"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
-                android:textSize="18sp"
-                android:text="@string/event_planning_organising"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true" />
+                android:textSize="18sp" />
 
         </RelativeLayout>
     </LinearLayout>

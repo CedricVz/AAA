@@ -92,7 +92,7 @@
 
 
     <EditText
-        android:id="@+id/et_input1"
+        android:id="@+id/widthET"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
         android:textAlignment="center" />
 
     <EditText
-        android:id="@+id/et_input2"
+        android:id="@+id/lengthET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
@@ -115,7 +115,7 @@
         android:textAlignment="center" />
 
     <EditText
-        android:id="@+id/et_input3"
+        android:id="@+id/heightET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#919191"
@@ -128,20 +128,12 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="0.76">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="96dp"
-            android:onClick="Next"
-            android:text="@string/next" />
-
-        <Button
-            android:id="@+id/bt_calculate1"
-            android:layout_width="match_parent"
+            android:id="@+id/calcMetBtn"
+            android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -152,15 +144,62 @@
             android:text="@string/calculate_in_meteres" />
 
         <Button
-            android:id="@+id/bt_calculate2"
+            android:id="@+id/calcFeetBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/calcMetBtn"
+            android:layout_alignBottom="@+id/calcMetBtn"
+            android:layout_alignEnd="@+id/calcMetBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/calcMetBtn"
             android:layout_gravity="center_horizontal"
             android:onClick="calculateRoom"
             android:text="@string/calculate_in_feet"
-            android:visibility="invisible"
-            android:layout_alignBaseline="@+id/bt_calculate1"
-            android:layout_alignBottom="@+id/bt_calculate1"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/roomVolumeResultTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/calcMetBtn"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/calcMetBtn"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_toRightOf="@+id/calcMetBtn"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/bedroomBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/selectRoomTV"
+            android:layout_marginTop="34dp"
+            android:text="Bedroom" />
+
+        <Button
+            android:id="@+id/emptyRoomBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/bedroomBtn"
+            android:layout_marginTop="27dp"
+            android:text="Empty Room" />
+
+        <TextView
+            android:id="@+id/selectRoomTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:text="Please select type of room:"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_below="@+id/calcMetBtn"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 

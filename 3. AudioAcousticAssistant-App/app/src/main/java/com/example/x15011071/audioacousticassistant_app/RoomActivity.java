@@ -9,12 +9,29 @@ package com.example.x15011071.audioacousticassistant_app;
         import android.widget.EditText;
         import android.widget.RadioButton;
         import android.widget.TextView;
+        import android.widget.Toast;
 
 
 public class RoomActivity extends AppCompatActivity {
-    TextView input1;
-    TextView input2;
-    TextView input3;
+    TextView width;
+    TextView height;
+    TextView length;
+
+    double widthVal, heightVal, lengthVal;
+
+    ChooseActivity ca = new ChooseActivity();
+
+    Boolean youtubeRA = ca.youtube;
+    Boolean homeArtistRA = ca.homeArtist;
+    Boolean eventRA = ca.event;
+    double catResultRA = ca.catResult;
+
+    final double BED = 40;
+    double bedroomResult, emptyRoomResult;
+
+    Button emptyRoom, bedroom;
+
+
 
 //    TextView tv_result;
 //    TextView tv_result2;
@@ -23,13 +40,43 @@ public class RoomActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room);
 
+        emptyRoom = (Button)findViewById(R.id.emptyRoomBtn);
+        emptyRoom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        input1 = (EditText) findViewById(R.id.et_input1);
-        input2 = (EditText) findViewById(R.id.et_input2);
-        input3 = (EditText) findViewById(R.id.et_input3);
+                if((youtubeRA = true) || (homeArtistRA = true) || (eventRA = true)){
+                    emptyRoomResult = catResultRA;
+                    next();
+
+                }else{
+                    Toast.makeText(getApplicationContext(),"Sorry, sn error occurred. Please try again",Toast.LENGTH_SHORT).show();
+                }
+
+
+            }
+        });
+
+        bedroom = (Button)findViewById(R.id.bedroomBtn);
+        bedroom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if((youtubeRA = true) || (homeArtistRA = true) || (eventRA = true)){
+                    bedroomResult = catResultRA + BED;
+                    next();
+
+                }else{
+                    Toast.makeText(getApplicationContext(),"Sorry, sn error occurred. Please try again",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        width = (EditText) findViewById(R.id.widthET);
+        length = (EditText) findViewById(R.id.lengthET);
+        height = (EditText) findViewById(R.id.heightET);
 
         Button bt_calculate1;
-        bt_calculate1 = (Button) findViewById(R.id.bt_calculate1);
+        bt_calculate1 = (Button) findViewById(R.id.calcMetBtn);
 
 //        tv_result = (TextView) findViewById(R.id.tv_result);
 //        tv_result2 = (TextView) findViewById(R.id.tv_result2);
@@ -59,12 +106,12 @@ public class RoomActivity extends AppCompatActivity {
     public void calculateRoom(View v){}
     private void makeCalculations1(){
 
-        double n1 = Double.valueOf(input1.getText().toString());
-        double n2 = Double.valueOf(input2.getText().toString());
-        double n3 = Double.valueOf(input3.getText().toString());
+        widthVal = Double.valueOf(width.getText().toString()); ///PLEASE FIX FEARGHAL!
+        heightVal = Double.valueOf(height.getText().toString());
+        lengthVal = Double.valueOf(length.getText().toString());
 
 
-        double result= n1*n2*n3;
+        double result= widthVal * heightVal * lengthVal;
         double conversion = result*35.31;
 
 //        tv_result.setText("The result is: " + result);
@@ -76,12 +123,12 @@ public class RoomActivity extends AppCompatActivity {
     public void calculateRoom2(View v){}
     private void makeCalculations2() {
 
-        double n1 = Double.valueOf(input1.getText().toString());
-        double n2 = Double.valueOf(input2.getText().toString());
-        double n3 = Double.valueOf(input3.getText().toString());
+        widthVal = Double.valueOf(width.getText().toString()); ///PLEASE FIX FEARGHAL!
+        heightVal = Double.valueOf(height.getText().toString());
+        lengthVal = Double.valueOf(length.getText().toString());
 
 
-        double conversion= n1*n2*n3;
+        double converion = widthVal * heightVal * lengthVal;
 
 //        tv_result.setText("The result is: " + result);
 //        tv_result2.setText("The result is: " + conversion);
@@ -92,8 +139,8 @@ public class RoomActivity extends AppCompatActivity {
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
-        Button resetButton=(Button)findViewById(R.id.bt_calculate1);
-        Button resetButton2=(Button)findViewById(R.id.bt_calculate2);
+        Button resetButton=(Button)findViewById(R.id.calcMetBtn);
+        Button resetButton2=(Button)findViewById(R.id.calcFeetBtn);
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.radio_Meters:
@@ -108,7 +155,7 @@ public class RoomActivity extends AppCompatActivity {
                     break;
         }
     }
-    public void Next(View view)
+    public void next()
     {
         Intent intent = new Intent(this,RecordActivity.class);
         startActivity(intent);

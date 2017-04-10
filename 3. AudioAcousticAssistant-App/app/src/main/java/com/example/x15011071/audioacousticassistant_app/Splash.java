@@ -12,7 +12,7 @@ import com.example.x15011071.audioacousticassistant_app.R;
 /**
  * Created by user on 16/03/2017.
  */
-
+/*
 public class Splash extends AppCompatActivity {
     private static int WELCOME_TIMEOUT = 3000;
 
@@ -50,3 +50,4 @@ public class Splash extends AppCompatActivity {
 
     }
 }
+*/
