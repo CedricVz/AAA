@@ -10,14 +10,19 @@ package com.example.x15011071.audioacousticassistant_app;
         import android.widget.RadioButton;
         import android.widget.TextView;
         import android.widget.Toast;
+        import java.text.DecimalFormat;
 
 
 public class RoomActivity extends AppCompatActivity {
-    TextView width;
-    TextView height;
-    TextView length;
+    TextView widthET, heightET, lengthET, roomVolumeResultTV;
+    Button calcBtn, emptyRoom, bedroom;
 
-    double widthVal, heightVal, lengthVal;
+    final double BED = 40;
+
+    double widthVal, heightVal, lengthVal, bedroomResult, emptyRoomResult;
+
+    Boolean feet = true;
+    Boolean metres = false; //default starts with feet = true;
 
     ChooseActivity ca = new ChooseActivity();
 
@@ -26,19 +31,13 @@ public class RoomActivity extends AppCompatActivity {
     Boolean eventRA = ca.event;
     double catResultRA = ca.catResult;
 
-    final double BED = 40;
-    double bedroomResult, emptyRoomResult;
-
-    Button emptyRoom, bedroom;
-
-
-
 //    TextView tv_result;
 //    TextView tv_result2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room);
+        roomVolumeResultTV = (TextView) findViewById(R.id.roomVolumeResultTV);
 
         emptyRoom = (Button)findViewById(R.id.emptyRoomBtn);
         emptyRoom.setOnClickListener(new View.OnClickListener() {
@@ -71,21 +70,18 @@ public class RoomActivity extends AppCompatActivity {
             }
         });
 
-        width = (EditText) findViewById(R.id.widthET);
-        length = (EditText) findViewById(R.id.lengthET);
-        height = (EditText) findViewById(R.id.heightET);
+        widthET = (EditText) findViewById(R.id.widthET);
+        lengthET = (EditText) findViewById(R.id.lengthET);
+        heightET = (EditText) findViewById(R.id.heightET);
 
         Button bt_calculate1;
-        bt_calculate1 = (Button) findViewById(R.id.calcMetBtn);
+        bt_calculate1 = (Button) findViewById(R.id.calcBtn);
 
-//        tv_result = (TextView) findViewById(R.id.tv_result);
-//        tv_result2 = (TextView) findViewById(R.id.tv_result2);
 
         bt_calculate1.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                makeCalculations1();
-                makeCalculations2();
+                makeCalc();
             }
         });
     }
@@ -103,56 +99,67 @@ public class RoomActivity extends AppCompatActivity {
 //    }
 
 
-    public void calculateRoom(View v){}
-    private void makeCalculations1(){
+    public void feetCalc(View v){}
+    private void makeCalc(){
+     //   final double FEET_CONVERSION = 30.48; // final value not working
+        DecimalFormat df = new DecimalFormat("##.00");
 
-        widthVal = Double.valueOf(width.getText().toString()); ///PLEASE FIX FEARGHAL!
-        heightVal = Double.valueOf(height.getText().toString());
-        lengthVal = Double.valueOf(length.getText().toString());
+        roomVolumeResultTV.setText("");
 
+        if(feet = true){
+            double widthFeet = Double.valueOf(widthET.getText().toString());
+            double heightFeet = Double.valueOf(heightET.getText().toString());
+            double lengthFeet = Double.valueOf(lengthET.getText().toString());
 
-        double result= widthVal * heightVal * lengthVal;
-        double conversion = result*35.31;
+            double totalFeet = widthFeet * heightFeet * lengthFeet; //result is in metres
+            double convertToMetres = totalFeet * 30.48; //30.48 is the conversion rate for converting FEET into METRES (squared)
 
-//        tv_result.setText("The result is: " + result);
-//        tv_result2.setText("The result is: " + conversion);
+            String roundedMetres = df.format(totalFeet);
+            String roundedFeet = df.format(convertToMetres);
 
+            roomVolumeResultTV.setText(roundedFeet + " sq. feet" + "\n" + roundedMetres + " sq. metres");
+        }
 
+        else if(metres = true){
+            double widthFeet = Double.valueOf(widthET.getText().toString());
+            double heightFeet = Double.valueOf(heightET.getText().toString());
+            double lengthFeet = Double.valueOf(lengthET.getText().toString());
 
+            double totalMetres = widthFeet * heightFeet * lengthFeet; //result is in metres
+            double convertToFeet = totalMetres * 32.80; //32.80 is the conversion rate for converting METRES to FEET (squared)
+
+            String roundedMetres = df.format(totalMetres);
+            String roundedFeet = df.format(convertToFeet);
+
+            roomVolumeResultTV.setText(roundedMetres + " sq. metres" + "\n" + roundedFeet + " sq. feet");
+        }
+
+        else{
+            Toast.makeText(getApplicationContext(),"Sorry, an error occurred. Please try again",Toast.LENGTH_SHORT).show(); //error catching
+        }
     }
-    public void calculateRoom2(View v){}
-    private void makeCalculations2() {
 
-        widthVal = Double.valueOf(width.getText().toString()); ///PLEASE FIX FEARGHAL!
-        heightVal = Double.valueOf(height.getText().toString());
-        lengthVal = Double.valueOf(length.getText().toString());
-
-
-        double converion = widthVal * heightVal * lengthVal;
-
-//        tv_result.setText("The result is: " + result);
-//        tv_result2.setText("The result is: " + conversion);
-
-
-
-    }
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
+        calcBtn = (Button)findViewById(R.id.calcBtn);
         boolean checked = ((RadioButton) view).isChecked();
-        Button resetButton=(Button)findViewById(R.id.calcMetBtn);
-        Button resetButton2=(Button)findViewById(R.id.calcFeetBtn);
+
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.radio_Meters:
                 if (checked)
-                    resetButton.setVisibility(View.VISIBLE);
-                    resetButton2.setVisibility(View.INVISIBLE);
+                    calcBtn.setText("CALCULATE IN METRES");
+                    metres = true;
+                    feet = false;
                     break;
             case R.id.radio_Feet:
                 if (checked)
-                    resetButton2.setVisibility(View.VISIBLE);
-                    resetButton.setVisibility(View.INVISIBLE);
-                    break;
+                    calcBtn.setText("CALCULATE IN FEET");
+                    metres = false;
+                    feet = true;
+                    break; //Depending on what radio button is checked, text on button will change accordingly.
+            default:
+                roomVolumeResultTV.setText("Select feet or metres");
         }
     }
     public void next()
