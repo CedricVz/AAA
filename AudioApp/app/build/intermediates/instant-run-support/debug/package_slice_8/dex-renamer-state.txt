@@ -1,4 +1,0 @@
-#Mon Apr 10 12:58:27 BST 2017
-base.0=C\:\\Users\\Cedric\\Desktop\\AAA-ProjectDocs\\AAA\\AudioApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_8
-renamed.0=classes.dex
-file.0=C\:\\Users\\Cedric\\Desktop\\AAA-ProjectDocs\\AAA\\AudioApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_8\\classes.dex

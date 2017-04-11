@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">AudioAcousticAssistant-App</string>
+    <string name="store_picture_message">Splash</string>
+
+    <!-- Strings related to login -->
+
+    <string name="sign_in">sign_in</string>
+    <string name="sign_up">sign_up</string>
+    <string name="height">Height</string>
+    <string name="length">Length</string>
+    <string name="next">Next</string>
+    <string name="width">Width</string>
+    <string name="calculation">calculation</string>
+    <string name="calculate_in_feet">Calculate in Feet</string>
+    <string name="calculate_in_meteres">Calculate in Meters</string>
+    <string name="feet">Feet</string>
+    <string name="meters">Meters</string>
+    <string name="please_enter_room_mesurements">Please Enter Room Mesurements</string>
+    <string name="categories">CATEGORIES</string>
+    <string name="next1">Next</string>
+    <string name="next2">Next</string>
+    <string name="next3">Next</string>
+    <string name="event_picture">Event picture</string>
+    <string name="next4">Next</string>
+    <string name="record_button">Record Button</string>
+    <string name="laborum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="advice_tutorials">ADVICE/TUTORIALS</string>
+    <string name="funny_punch_picture">Funny punch picture</string>
+    <string name="date_of_birth2">Date Of Birth:</string>
+    <string name="free_user">Continue as free user</string>
+    <string name="youtube">youtube</string>
+    <string name="youtubepic">youtubePic</string>
+    <string name="lastname">Last Name</string>
+    <string name="google_signin">google signin</string>
+    <string name="welcome_to_better_audio">Welcome to better audio</string>
+    <string name="email">Email Address:</string>
+    <string name="first">First Name:</string>
+    <string name="consent">I accept AudioAccousticAssistant\'s Terms and Conditions and informed consent</string>
+    <string name="last">Last Name:</string>
+    <string name="home_artist">Home Artist</string>
+    <string name="event">TextView</string>
+    <string name="youtube_video_creator">YouTube Video Creator</string>
+    <string name="micpic">micpic</string>
+    <string name="height2">Height</string>
+    <string name="picture_of_youtube">picture_of_youtube</string>
+    <string name="audio">audio</string>
+    <string name="event_planning_organising">Event Planning/Organising</string>
+    <string name="musician_home_artist">Musician/Home Artist</string>
+    <string name="logo_picture">logo picture</string>
+</resources>

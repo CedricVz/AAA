@@ -1,5 +1,0 @@
-If you don't close MS Word beforehand, you will add files like:
-
-~$leName.docx
-
-Because the dollar sign ($) is used for a new command, it will not read it correctly. 

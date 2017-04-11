@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020202"
+
+
+    tools:context="com.example.x15011071.audioacousticassistant_app.AdviceActivity">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="551dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/advice_tutorials"
+            android:textColor="#ffffff"
+            android:textSize="40sp"
+            tools:layout_editor_absoluteX="77dp"
+            tools:layout_editor_absoluteY="45dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/laborum"
+            android:textColor="#ffffff"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="124dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="323dp"
+            android:contentDescription="@string/funny_punch_picture"
+            app:srcCompat="@drawable/youtubefun"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="137dp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
