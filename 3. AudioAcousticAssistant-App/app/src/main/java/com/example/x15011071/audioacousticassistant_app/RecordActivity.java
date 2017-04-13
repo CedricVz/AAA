@@ -5,6 +5,7 @@ package com.example.x15011071.audioacousticassistant_app;
 * @author Colin Allen, Keith Feeney, Patrick Lawlor, Fearghal McMorrow, Cedric Vecchionacce
 * @reference YouTube - https://www.youtube.com/watch?v=jcrh8C376-c
 * @reference StackOverflow - https://stackoverflow.com/questions/41202083/auto-stop-recording-after-seconds
+* @reference StackOverflow 2 - http://stackoverflow.com/questions/15693990/measuring-decibels-with-mobile-phone
 * @date 11 April 2017
 *
 *
@@ -24,6 +25,7 @@ import android.media.MediaRecorder;
 
 
 import java.io.File;
+import java.io.IOException;
 
 public class RecordActivity extends AppCompatActivity {
 
@@ -32,12 +34,40 @@ public class RecordActivity extends AppCompatActivity {
     MediaPlayer play;
     MediaRecorder record;
     String FILE;
+    Thread runner;
+    private static double maxAverage = 0.0; //
+    static final private double AVERAGE_FILTER = 0.6;
 
+    final Runnable updater = new Runnable(){
+
+        public void run(){
+            updateTv();
+        };
+    };
+    final Handler mHandler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record);
+        infoTV = (TextView) findViewById(R.id.infoTV);
+        if (runner == null)
+        {
+            runner = new Thread(){
+                public void run()
+                {
+                    while (runner != null)
+                    {
+                        try
+                        {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) { };
+                        mHandler.post(updater);
+                    }
+                }
+            };
+            runner.start();
+        }
 
         FILE = Environment.getExternalStorageState() + "/tempRecord.3gpp"; //@reference YouTube
         infoTV = (TextView)findViewById(R.id.infoTV);
@@ -101,7 +131,13 @@ public class RecordActivity extends AppCompatActivity {
         record.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
         record.setOutputFile(FILE);
 
-        record.prepare();
+
+        try {
+            record.prepare();
+        }
+        catch (java.io.IOException f){
+            f.printStackTrace();
+        }
         record.start();
 
     }
@@ -109,6 +145,27 @@ public class RecordActivity extends AppCompatActivity {
     public void stopRecord() throws Exception{ //@reference YouTube
         record.stop();
         record.release();
+    }
+
+    public void updateTv(){
+        infoTV.setText(Double.toString((getAmplitudeEMA())) + " dB");
+    }
+
+
+    public double getAmplitude() {
+        if (record != null) {
+            return (double) record.getMaxAmplitude();
+        }else {
+            return 123.45;
+        }
+    }
+
+    public double getAmplitudeEMA() {
+        double amp =  getAmplitude();
+        double result = getAmplitude();
+       // maxAverage = (AVERAGE_FILTER * amp) + ((1.0 - AVERAGE_FILTER) * maxAverage);
+       // result = 20 * Math.log10(maxAverage / amp);
+        return result;
     }
 
     public void next()
