@@ -1,12 +1,31 @@
 package com.example.x15011071.audioacousticassistant_app;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
 public class ChooseActivity extends AppCompatActivity {
+    //final EditText etUserName;
+
+
+
+    //these connect to the buttons within that xml file
+   // etUserName = (EditText) findViewById(R.id.etUserName);
+
+//        final TextView welcomeMessage = (TextView) findViewById(R.id.tvWelcomeMessage);
+
+        /*
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("name");
+        String username = intent.getStringExtra("username");
+
+
+        String message = name + "welcome to your user area";
+        welcomeMessage.setText(message);
+        etUserName.setText(username);
+        */
 
     final double GREENSCREEN = 1.5;
     final double CHAIR = 1.9;

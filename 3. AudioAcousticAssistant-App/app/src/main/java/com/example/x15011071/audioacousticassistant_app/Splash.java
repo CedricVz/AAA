@@ -26,7 +26,7 @@ public class Splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run(){
-                Intent welcome = new Intent(Splash.this, StartActivity.class);
+                Intent welcome = new Intent(Splash.this, RegisterActivity.class);
                 startActivity(welcome);
                 overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 finish();
@@ -37,7 +37,7 @@ public class Splash extends AppCompatActivity {
             public void run(){
                 try {
                     sleep(3000);
-                    Intent startMainScreen = new Intent(getApplicationContext(), StartActivity.class);
+                    Intent startMainScreen = new Intent(getApplicationContext(), RegisterActivity.class);
                     startActivity(startMainScreen);
                     finish();
                 } catch (InterruptedException e) {

@@ -12,11 +12,11 @@
 
     android:visibility="visible">
 
-    <!--tools:context="com.example.user.Splash.StartActivity"-->
+    <!--tools:context="com.example.user.Splash.RegisterActivity"-->
 
 
 
-    <!--tools:context="com.example.user.SplashActivity.StartActivity"-->
+    <!--tools:context="com.example.user.SplashActivity.RegisterActivity"-->
 
 
 
@@ -25,29 +25,28 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="2"
+        tools:ignore="UselessParent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        tools:ignore="UselessParent">
+        android:layout_alignParentStart="true">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="153dp"
+            android:layout_height="0dp"
             android:layout_marginTop="0dp"
-            android:layout_weight="1.36"
+            android:layout_weight="1.94"
             android:contentDescription="@string/logo_picture"
             android:paddingBottom="0dp"
             android:paddingTop="0dp"
             android:scaleType="fitXY"
 
-            app:srcCompat="@drawable/logo"
+            app:srcCompat="@drawable/head"
 
             tools:ignore="ContentDescription" />
 
 
-
-
         <EditText
+            android:id="@+id/etName"
             style="@android:style/Widget.DeviceDefault.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,12 +62,13 @@
             android:textColor="@android:color/white" />
 
         <EditText
+            android:id="@+id/etUserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@android:color/darker_gray"
             android:ems="10"
-            android:hint="@string/last"
+            android:hint="@string/user_name"
             android:inputType="textPersonName"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
@@ -76,58 +76,55 @@
             android:textColor="@android:color/white" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/etAge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="10dp"
             android:background="@android:color/darker_gray"
             android:ems="10"
-            android:hint="@string/email"
-            android:inputType="textPersonName"
+            android:hint="@string/age"
+            android:inputType="number"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
             android:textAlignment="center"
             android:textColor="@android:color/white" />
 
         <EditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@android:color/darker_gray"
             android:ems="10"
-            android:hint="@string/date_of_birth2"
-            android:inputType="textPersonName"
+            android:hint="@string/password"
+            android:inputType="textPassword"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
             android:textAlignment="center"
             android:textColor="@android:color/white" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/bRegister"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginTop="2dp"
-            android:layout_weight="0.48"
             android:onClick="Next"
             android:paddingBottom="0dp"
             android:paddingTop="0dp"
-            android:text="@string/free_user"
+            android:text="@string/register"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textSize="18sp"
             android:textStyle="italic"
             tools:text="WELCOME TO BETTER AUDIO" />
 
 
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_weight="0.54"
             android:background="@android:color/white"
             android:ems="10"
             android:inputType="textMultiLine"

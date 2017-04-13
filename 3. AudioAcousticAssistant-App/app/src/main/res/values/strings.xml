@@ -47,4 +47,15 @@
     <string name="event_planning_organising">Event Planning/Organising</string>
     <string name="musician_home_artist">Musician/Home Artist</string>
     <string name="logo_picture">logo picture</string>
+    <string name="age">Age</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="user_name">User Name</string>
+    <string name="register2">Register</string>
+    <string name="log_in">log in</string>
+    <string name="login">Login</string>
+    <string name="password2">Password</string>
+    <string name="user_name2">User Name</string>
+    <string name="youtube_content_creator">YouTube Content Creator</string>
+    <string name="continue2">Continue</string>
 </resources>

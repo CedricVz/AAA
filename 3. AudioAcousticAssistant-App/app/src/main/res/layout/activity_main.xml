@@ -34,7 +34,7 @@
                 android:contentDescription="@string/audio"
                 android:padding="12dp"
                 android:scaleType="fitXY"
-                app:srcCompat="@drawable/audiopicture"
+                app:srcCompat="@drawable/head"
                 tools:ignore="ContentDescription" />
 
         </RelativeLayout>
@@ -44,41 +44,41 @@
             android:layout_height="131dp">
 
             <Button
+                android:id="@+id/btRegister"
                 android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
-
-                android:layout_above="@+id/button5"
+                android:layout_above="@+id/btLogin"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
 
-                android:onClick="Next"
+                android:layout_alignParentStart="true"
+                android:onClick="NextRegister"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:text="@string/sign_up"
 
+                android:text="@string/register2"
                 android:textColor="#ffffff"
                 android:textSize="30sp"
-                tools:text="SIGN UP" />
-
+                tools:text="Register" />
 
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/btLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginBottom="14dp"
-                android:onClick="Next"
+                android:onClick="NextLogin"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:text="@string/sign_in"
+                android:text="@string/log_in"
 
                 android:textColor="#ffffff"
                 android:textSize="30sp"
 
-                tools:text="SIGN IN" />
+                tools:text="log in" />
 
         </RelativeLayout>
 
@@ -88,18 +88,23 @@
             android:layout_height="75dp">
 
 
-            <ImageView
-                android:id="@+id/imageView8"
+            <Button
+                android:id="@+id/button4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_marginBottom="14dp"
+                android:onClick="NextContinue"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/continue2"
 
-                android:contentDescription=""
-                android:padding="0dp"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/facebooksignin"
-                tools:ignore="ContentDescription,RtlHardcoded" />
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+
+                tools:text="Continue" />
 
         </RelativeLayout>
 
