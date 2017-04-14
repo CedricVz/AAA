@@ -10,7 +10,7 @@ package com.example.x15011071.audioacousticassistant_app;
 *
 *
  */
-
+import android.Manifest;
 import android.content.Intent;
 import android.os.Environment;
 import android.os.Handler;
@@ -22,8 +22,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
-
-
 import java.io.File;
 import java.io.IOException;
 
@@ -37,6 +35,11 @@ public class RecordActivity extends AppCompatActivity {
     Thread runner;
     private static double maxAverage = 0.0; //
     static final private double AVERAGE_FILTER = 0.6;
+    private static final String LOG_TAG = "AudioRecordTest";
+    private static final int REQUEST_RECORD_AUDIO_PERMISSION = 200;
+    /*// Requesting permission to RECORD_AUDIO
+    private boolean permissionToRecordAccepted = false;
+    private String [] permissions = {Manifest.permission.RECORD_AUDIO};*/
 
     final Runnable updater = new Runnable(){
 
@@ -115,15 +118,6 @@ public class RecordActivity extends AppCompatActivity {
     }
 
     public void startRecord() throws Exception{ //@reference YouTube
-        if (record != null){
-            record.release();
-        }
-
-        File fileOut = new File(FILE);
-
-        if(fileOut != null){
-            fileOut.delete();
-        }
 
         record = new MediaRecorder();
         record.setAudioSource(MediaRecorder.AudioSource.MIC);
@@ -131,11 +125,15 @@ public class RecordActivity extends AppCompatActivity {
         record.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
         record.setOutputFile(FILE);
 
+        if (record != null){
+            record.release();
+        }
+        File fileOut = new File(FILE);
 
         try {
             record.prepare();
         }
-        catch (java.io.IOException f){
+        catch (IOException f){
             f.printStackTrace();
         }
         record.start();
@@ -148,7 +146,8 @@ public class RecordActivity extends AppCompatActivity {
     }
 
     public void updateTv(){
-        infoTV.setText(Double.toString((getAmplitudeEMA())) + " dB");
+        //infoTV.setText(Double.toString((getAmplitudeEMA())) + " dB");
+        String dbString = String.valueOf(getAmplitudeEMA()+ "dB");
     }
 
 
@@ -161,11 +160,9 @@ public class RecordActivity extends AppCompatActivity {
     }
 
     public double getAmplitudeEMA() {
-        double amp =  getAmplitude();
-        double result = getAmplitude();
        // maxAverage = (AVERAGE_FILTER * amp) + ((1.0 - AVERAGE_FILTER) * maxAverage);
        // result = 20 * Math.log10(maxAverage / amp);
-        return result;
+        return 20 * Math.log10((double)Math.abs(getAmplitude()) / 32768);
     }
 
     public void next()

@@ -21,6 +21,9 @@
         <activity android:name=".RoomActivity" />
         <activity android:name=".ChooseActivity" />
         <activity android:name=".RecordActivity" />
+            <intent-filter>
+
+            </intent-filter>
         <activity android:name=".AdviceActivity" />
         <!--<activity android:name=".Splash" />-->
         <activity android:name=".RegisterActivity" />
