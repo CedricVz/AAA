@@ -22,6 +22,7 @@
         <activity android:name=".AdviceActivity" />
         <!--<activity android:name=".Splash" />-->
         <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".SplashActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>

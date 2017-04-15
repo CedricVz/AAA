@@ -21,16 +21,19 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        final EditText etUserName;
+        final EditText etEmail;
         final EditText etPassword;
         //This line of code connects this java file to the xml file of the same name
         setContentView(R.layout.activity_login);
 
         //these connect to the text fields/buttons within that xml file
-        etUserName = (EditText) findViewById(R.id.etUserName);
+        etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
 
         final Button bLogin = (Button) findViewById(R.id.bLogin);
+
+        //This was code for a link to the register page on the login page incase someone clicked on login without having registered
+        //however, we decided to take this out, but the code is still here.
 
 //        final TextView registerLink = (TextViewextView) findViewById(R.id.tvRegisterHere);
 
@@ -47,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String username = etUserName.getText().toString();
+                final String email = etEmail.getText().toString();
                 final String password = etPassword.getText().toString();
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
@@ -60,16 +63,12 @@ public class LoginActivity extends AppCompatActivity {
 
                             if (success) {
 
-                                /*
-                                String name = jsonResponse.getString("name");
-                                String age = jsonResponse.getString("age");
-                                */
-                                Intent intent = new Intent(LoginActivity.this, ChooseActivity.class);
-                                /*adam
-                                intent.putExtra("name", name);
-                                intent.putExtra("username", username);
 
-                                */
+
+                                Intent intent = new Intent(LoginActivity.this, ChooseActivity.class);
+
+
+
                                 LoginActivity.this.startActivity(intent);
 
 
@@ -87,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 };
 
-                LoginRequest loginRequest = new LoginRequest(username, password, responseListener);
+                LoginRequest loginRequest = new LoginRequest(email, password, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
                 queue.add(loginRequest);
 

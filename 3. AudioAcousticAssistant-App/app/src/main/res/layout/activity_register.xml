@@ -46,23 +46,7 @@
 
 
         <EditText
-            android:id="@+id/etName"
-            style="@android:style/Widget.DeviceDefault.EditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/darker_gray"
-            android:ems="10"
-            android:fadingEdge="vertical"
-            android:hint="@string/first"
-            android:inputType="textPersonName"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:textAlignment="center"
-            android:textColor="@android:color/white" />
-
-        <EditText
-            android:id="@+id/etUserName"
+            android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -76,20 +60,6 @@
             android:textColor="@android:color/white" />
 
         <EditText
-            android:id="@+id/etAge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/darker_gray"
-            android:ems="10"
-            android:hint="@string/age"
-            android:inputType="number"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:textAlignment="center"
-            android:textColor="@android:color/white" />
-
-        <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -97,29 +67,19 @@
             android:background="@android:color/darker_gray"
             android:ems="10"
             android:hint="@string/password"
-            android:inputType="textPassword"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
             android:textAlignment="center"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:inputType="textPassword" />
+
 
         <Button
-            android:id="@+id/bRegister"
-            style="@style/Widget.AppCompat.Button"
+            android:text="Register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="2dp"
-            android:onClick="Next"
-            android:paddingBottom="0dp"
-            android:paddingTop="0dp"
-            android:text="@string/register"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textSize="18sp"
-            android:textStyle="italic"
-            tools:text="WELCOME TO BETTER AUDIO" />
-
+            android:id="@+id/bRegister"
+            android:textSize="24sp" />
 
         <EditText
             android:layout_width="match_parent"
