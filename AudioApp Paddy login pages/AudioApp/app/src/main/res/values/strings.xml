@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">AudioApp</string>
+    <string name="fbbutton">Button</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="sign">SIGN IN</string>
+    <string name="facebook_app_id">207369259757395</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="sign_in_page"></string>
+    <string name="sign_up_page"></string>
+    <string name="choose_page"></string>
+    <string name="room_page"></string>
+    <string name="feet"></string>
+    <string name="meters"></string>
+    <string name="calculation"></string>
+    <string name="next"></string>
+    <string name="calculate_in_feet"></string>
+    <string name="calculate_in_meters"></string>
+    <string name="next4"></string>
+    <string name="record_button"></string>
+    <string name="record_page"></string>
+    <string name="advice_page"></string>
+    <string name="advice_tutorials"></string>
+    <string name="laborum"></string>
+    <string name="funny_punch_picture"></string>
+    <string name="categor"></string>
+    <string name="nextbtn"></string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="email_adress">Email Adress</string>
+    <string name="pword">Password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="email_address">Email Address</string>
+    <string name="first_name">First Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="last_name">Last Name</string>
+    <string name="i_accept_audioaccousticassistant_s_terms_and_conditions_and_informed_consent">I accept AudioAccousticAssistant\'s Terms and Conditions and informed consent</string>
+    <string name="welcome_to_better_audio">Welcome to better audio</string>
+    <string name="Login">TextView</string>
+    <string name="signinbtn">Button</string>
+    <string name="home_artist">Home Artist</string>
+    <string name="categories">TextView</string>
+    <string name="ytube">TextView</string>
+    <string name="evento">TextView</string>
+    <string name="LoginTf">Login</string>
+    <string name="sign_in_btn">Sign In</string>
+    <string name="event_organising_planning">Event Organising/Planning</string>
+    <string name="youtube_content_creator">YouTube Content Creator</string>
+    <string name="please_enter_room_measurements">Please enter room measurements</string>
+    <string name="height">height</string>
+    <string name="Height">Height</string>
+    <string name="length">Length</string>
+    <string name="width">Width</string>
+    <string name="categorie">CATEGORIE</string>
+    <string name="Next">next</string>
+    <string name="calculate_feet">Calculate In Feet</string>
+    <string name="calculate_meters">Calculate In Meters</string>
+    <string name="calculation_s">Calculation\'s</string>
+    <string name="Feet">feet</string>
+    <string name="Meters">meters</string>
+    <string name="nextPage">nextPage</string>
+    <string name="NextPage">NextPage</string>
+    <string name="nextbutton">nextbtn</string>
+</resources>

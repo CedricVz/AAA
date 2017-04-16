@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020202"
+    tools:context="com.example.user.audioapp.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="273dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription=""
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/head"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.22"
+                android:contentDescription="@string/app_name"
+                android:text="@string/LoginTf"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textStyle="bold|italic"
+                tools:ignore="InefficientWeight"
+                tools:text="Login" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="7dp"
+                android:background="@android:color/darker_gray"
+                android:ems="10"
+                android:hint="@string/email_address"
+                android:inputType="textPassword"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="7dp"
+                android:background="@android:color/darker_gray"
+                android:ems="10"
+                android:hint="@string/pword"
+                android:inputType="textEmailAddress"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/signInBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.22"
+                android:contentDescription="@string/app_name"
+                android:onClick="choose_page"
+                android:text="@string/sign_in_btn"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Sign In" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/remember_me"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                app:buttonTint="@android:color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
