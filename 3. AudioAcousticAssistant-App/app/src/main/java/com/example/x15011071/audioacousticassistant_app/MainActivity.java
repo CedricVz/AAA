@@ -5,6 +5,7 @@ package com.example.x15011071.audioacousticassistant_app;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
         import android.view.View;
+        import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,5 +28,10 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent intent = new Intent(this,ChooseActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(getApplicationContext(),"Sorry, you can't go back here",Toast.LENGTH_LONG).show();
     }
 }

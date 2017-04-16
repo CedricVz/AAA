@@ -16,32 +16,101 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/advice_tutorials"
-            android:textColor="#ffffff"
-            android:textSize="40sp"
-            tools:layout_editor_absoluteX="77dp"
-            tools:layout_editor_absoluteY="45dp" />
+            android:layout_height="322dp">
 
-        <TextView
+            <Button
+                android:id="@+id/startOverBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="START OVER" />
+
+            <TextView
+                android:id="@+id/changingTextTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/headingTV"
+                android:layout_weight="2.86"
+                android:gravity="center|top"
+                android:text="We're sorry, an error occured."
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="124dp" />
+
+            <TextView
+                android:id="@+id/headingTV"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_weight="0.23"
+                android:text="RESULT"
+                android:textColor="#ffffff"
+                android:textSize="40sp"
+                tools:layout_editor_absoluteX="77dp"
+                tools:layout_editor_absoluteY="45dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/laborum"
-            android:textColor="#ffffff"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="124dp" />
+            android:layout_height="181dp"
+            android:background="@android:color/background_light">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="323dp"
-            android:contentDescription="@string/funny_punch_picture"
-            app:srcCompat="@drawable/youtubefun"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="137dp" />
+            <ImageView
+                android:id="@+id/foamIMG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/foam" />
+
+            <Button
+                android:id="@+id/urlBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@android:color/transparent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="-18dp"
+            tools:layout_editor_absoluteY="540dp">
+
+            <ImageView
+                android:id="@+id/facebookIMG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                app:srcCompat="@drawable/facebook"
+                tools:layout_editor_absoluteX="3dp"
+                tools:layout_editor_absoluteY="294dp" />
+
+            <Button
+                android:id="@+id/facebookBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:background="@android:color/transparent" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 

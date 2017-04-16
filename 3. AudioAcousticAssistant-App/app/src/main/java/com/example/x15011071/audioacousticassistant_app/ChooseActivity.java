@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class ChooseActivity extends AppCompatActivity {
     //final EditText etUserName;
@@ -27,20 +28,26 @@ public class ChooseActivity extends AppCompatActivity {
         etUserName.setText(username);
         */
 
-    final double GREENSCREEN = 1.5;
-    final double CHAIR = 1.9;
-    final double PERSON = 4.73;
+    public final double GREENSCREEN = 1.5;
+    public final double CHAIR = 1.9;
+    public final double PERSON = 4.73;
 
-    Button youtubeBtn, homeArtistBtn, eventBtn;
-    Boolean youtube = false;
-    Boolean homeArtist = false;
-    Boolean event = false;
-    double catResult;
+    public Button youtubeBtn, homeArtistBtn, eventBtn;
+    public Boolean youtube = false;
+    public Boolean homeArtist = false;
+    public Boolean event = false;
+    public double catResult;
+
+    public final double youtubeResult = ((GREENSCREEN + CHAIR) + PERSON);
+    public final double homeArtistResult = CHAIR + PERSON;
+    public final double eventResult = CHAIR * 2;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose);
+
 
 
         youtubeBtn = (Button) findViewById(R.id.youtubeBtn);
@@ -49,7 +56,7 @@ public class ChooseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                catResult = GREENSCREEN + CHAIR + PERSON;
+                catResult = youtubeResult; //catResult not working
                 youtube = true;
 
                 homeArtist = false;
@@ -64,7 +71,7 @@ public class ChooseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                catResult = CHAIR + PERSON;
+                catResult = homeArtistResult;
                 homeArtist = true;
 
                 youtube = false;
@@ -79,7 +86,7 @@ public class ChooseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                catResult = PERSON * 2; // default no of people
+                catResult = eventResult;
                 event = true;
 
                 youtube = false;
@@ -89,13 +96,24 @@ public class ChooseActivity extends AppCompatActivity {
         });
     }
 
-
-
-    public void next()
-    {
+    public void next() {
         Intent intent = new Intent(this,RoomActivity.class);
+
+        intent.putExtra("youtube", youtube);
+        intent.putExtra("event", event);
+        intent.putExtra("homeArtist", homeArtist);
+
+        Bundle b = new Bundle();
+        b.putDouble("catResult", catResult);
+        intent.putExtras(b);
+
         startActivity(intent);
 
-
     }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(getApplicationContext(),"Sorry, you can't go back here",Toast.LENGTH_LONG).show();
+    }
+
 }
