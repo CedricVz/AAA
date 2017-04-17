@@ -126,20 +126,25 @@ public class AdviceActivity extends AppCompatActivity {
         finish();
     }
 
-    @Override
-    public void onBackPressed() {
-        Toast.makeText(getApplicationContext(), "Sorry, you can't go back here", Toast.LENGTH_LONG).show();
-    }
+//    @Override
+//    public void onBackPressed() {
+//        Toast.makeText(getApplicationContext(), "Sorry, you can't go back here", Toast.LENGTH_LONG).show();
+//    } //not working separately with onKeyDown(), instead used in onKeyDown().
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
-            Toast.makeText(getApplicationContext(), "Nuh-uh, no increasing the volume! My ears hurt already!!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Nuh-uh, no increasing the volume! My ears hurt already!!", Toast.LENGTH_LONG).show();
             return true;
         } else if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN){
-            Toast.makeText(getApplicationContext(), "What?! You want to decrease the volume?! I can barely hear anything!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "What?! You want to decrease the volume?! I can barely hear anything!", Toast.LENGTH_LONG).show();
             return true;
-        }else{
+        }
+        else if(keyCode == KeyEvent.KEYCODE_BACK){ //KEYCODE_BACK is the Back Button.
+            Toast.makeText(getApplicationContext(), "Sorry, you can't go back here", Toast.LENGTH_LONG).show();
+            return true;
+        }
+        else{
             return false;
         }
     }
