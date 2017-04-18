@@ -52,7 +52,7 @@
             android:layout_marginTop="10dp"
             android:background="@android:color/darker_gray"
             android:ems="10"
-            android:hint="@string/user_name"
+            android:hint="Email"
             android:inputType="textPersonName"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
