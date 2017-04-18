@@ -65,7 +65,9 @@ public class LoginActivity extends AppCompatActivity {
                             if (success) {
 
 
+
                                 Intent intent = new Intent(LoginActivity.this, ChooseActivity.class);
+
 
 
                                 LoginActivity.this.startActivity(intent);
@@ -92,9 +94,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-}
-/*    @Override
+
+    @Override
     public void onBackPressed() {
         Toast.makeText(getApplicationContext(),"Sorry, you can't go back here",Toast.LENGTH_LONG).show();
     }
-}*/
+}

@@ -11,6 +11,7 @@ package com.example.x15011071.audioacousticassistant_app;
 
  */
 
+import android.os.Build;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import android.view.View;
 
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
@@ -28,6 +30,7 @@ public class AdviceActivity extends AppCompatActivity {
 
     Button urlBtn, facebookBtn, startOverBtn;
     TextView changingText;
+    ImageView imageIMG;
 
     final double BED = 40;
     final double GREENSCREEN = 1.5;
@@ -48,6 +51,8 @@ public class AdviceActivity extends AppCompatActivity {
                 startOver();
             }
         });
+
+        imageIMG = (ImageView)findViewById(R.id.imageIMG);
 
         //to get values from RecordActivity.java
         final boolean youtube = getIntent().getExtras().getBoolean("youtubeRec");
@@ -76,18 +81,47 @@ public class AdviceActivity extends AppCompatActivity {
         eventAF = db / 20;
 
         if (youtube == true) {
-            changingText.setText("As a YouTuber, you will need to soften the sound of your voice echoing on your walls. It's recommended that you have " + youtubeAF + " square metres of acoustic foam on your walls. You can click the image below to purchase some foam from our store");
+            changingText.setText("As a YouTuber, you will need some carpet, greenscreen and " + youtubeAF + " square metres of foam. You can but the kit by clicking the image below.");
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                imageIMG.setImageDrawable(getResources().getDrawable(R.drawable.youtubefoam, getApplicationContext().getTheme()));
+//            } else {
+//                imageIMG.setImageDrawable(getResources().getDrawable(R.drawable.youtubefoam));
+//            }
+//
+// changing image not working per result
+
         } else if (homeArtist == true) {
-            changingText.setText("As a Home Artist, as your perform, you will need to soften the sound of your voice against the walls. It's recommended that you have " + homeArtistAF + " square metres of acoustic foam on your wall. You can click the image below to purchase some foam from our store");
+            changingText.setText("As a YouTuber, you will need some carpet " + youtubeAF + " square metres of foam. You can but the kit by clicking the image below.");
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                imageIMG.setImageDrawable(getResources().getDrawable(R.drawable.foamhomeartist, getApplicationContext().getTheme()));
+//            } else {
+//                imageIMG.setImageDrawable(getResources().getDrawable(R.drawable.foamhomeartist));
+//            }
         } else if (event == true) {
-            changingText.setText("As an Event Organiser, the artists' sounds will bounce off the walls. It is recommended that the walls are softened with " + eventAF + " square metres of acoustic foam. You can click the image below to purchase some foam from our store");
+            changingText.setText("As a YouTuber, you will need " + youtubeAF + " square metres of foam. You can but the kit by clicking the image below.");
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                imageIMG.setImageDrawable(getResources().getDrawable(R.drawable.foamevent, getApplicationContext().getTheme()));
+//            } else {
+//                imageIMG.setImageDrawable(getResources().getDrawable(R.drawable.foamevent));
+//            }
+
         }
 
         urlBtn = (Button) findViewById(R.id.urlBTN);
         urlBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                urlAmazon();
+                if (youtube == true){
+                    urlAmazonYouTubeKit();
+
+                }
+            else if (homeArtist == true){
+                urlAmazonHomeArtistKit();
+                }
+
+            else if (event == true) {
+                    urlAmazonEventKit();
+                }
             }
         });
 
@@ -100,7 +134,17 @@ public class AdviceActivity extends AppCompatActivity {
         });
     }
 
-    public void urlAmazon() {// @reference Stack Overflow URL & @authors
+    public void urlAmazonYouTubeKit() {// @reference Stack Overflow URL & @authors
+//        Snackbar.make(findViewById(android.R.id.content), "Opening browser...", Snackbar.LENGTH_LONG).show(); //Not displaying
+        gotToUrl("https://www.amazon.com/Auralex-Acoustics-Roominator-Absorption-Treatment/dp/B000E1U9ZG");
+    }
+
+    public void urlAmazonHomeArtistKit() {// @reference Stack Overflow URL & @authors
+//        Snackbar.make(findViewById(android.R.id.content), "Opening browser...", Snackbar.LENGTH_LONG).show(); //Not displaying
+        gotToUrl("https://www.amazon.com/Soundproof-Store-Acoustic-Soundproofing-Charcoal/dp/B00ATP5KF6");
+    }
+
+    public void urlAmazonEventKit() {// @reference Stack Overflow URL & @authors
 //        Snackbar.make(findViewById(android.R.id.content), "Opening browser...", Snackbar.LENGTH_LONG).show(); //Not displaying
         gotToUrl("https://www.amazon.co.uk/Pro-Acoustic-Foam-Wedge-Treatment/dp/B006I1J25E/");
     }

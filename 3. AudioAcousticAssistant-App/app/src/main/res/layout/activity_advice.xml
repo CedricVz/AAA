@@ -67,10 +67,10 @@
             android:background="@android:color/background_light">
 
             <ImageView
-                android:id="@+id/foamIMG"
+                android:id="@+id/imageIMG"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/foam" />
+                app:srcCompat="@drawable/foamevent" />
 
             <Button
                 android:id="@+id/urlBTN"
