@@ -53,7 +53,7 @@ public class RegisterActivity extends AppCompatActivity  {
 
                             //if the registration is successful (recieves "success" from the register.php file), It will send the user to the login page.
                             if (success) {
-                                Intent intent = new Intent(RegisterActivity.this, ChooseActivity.class);
+                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                 RegisterActivity.this.startActivity(intent);
 
                                 //else, display an error message ("Register Failed") and allow the user to try again (.setNegativeButton("Retry", null).
