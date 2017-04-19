@@ -6,12 +6,11 @@
     android:background="#020202"
     android:weightSum="1">
 
-    <ImageView
+    <VideoView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="332dp"
+        android:id="@+id/videoView"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/splash_img"
-        android:contentDescription="@string/store_picture_message" />
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

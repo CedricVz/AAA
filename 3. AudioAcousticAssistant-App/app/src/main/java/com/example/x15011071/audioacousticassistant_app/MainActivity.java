@@ -22,20 +22,31 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    //Navigation
+
+    //this sends the user to the login page
     public void NextLogin(View view)
     {
         Intent intent = new Intent(this,LoginActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.fade_in_two, R.anim.fade_out_two);//This is what allows the pages to fade together instead of a hard cut
     }
+
+    //this sends the user to the register page
     public void NextRegister(View view)
     {
         Intent intent = new Intent(this,RegisterActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.fade_in_two, R.anim.fade_out_two);
     }
+
+    //this sends the user to the choose page (used for debugging purposes)
     public void NextContinue(View view)
     {
         Intent intent = new Intent(this,ChooseActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.fade_in_two, R.anim.fade_out_two);
     }
 
     @Override //disables back button.

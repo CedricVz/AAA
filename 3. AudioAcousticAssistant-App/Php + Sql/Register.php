@@ -1,4 +1,6 @@
 <?php
+
+//@reference YouTube - TonikamiTV/Login Register 6 part series - https://www.youtube.com/watch?v=QxffHgiJ64M
 	//this imports the password library that does the encryption. 
     require("password.php");
 	

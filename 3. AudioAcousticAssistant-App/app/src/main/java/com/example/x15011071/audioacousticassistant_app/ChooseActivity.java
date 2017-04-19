@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class ChooseActivity extends AppCompatActivity {
     //final EditText etUserName;
@@ -28,6 +27,7 @@ public class ChooseActivity extends AppCompatActivity {
         etUserName.setText(username);
         */
 
+    // declaring values based on which category is chosen
     public final double GREENSCREEN = 1.5;
     public final double CHAIR = 1.9;
     public final double PERSON = 4.73;
@@ -108,7 +108,7 @@ public class ChooseActivity extends AppCompatActivity {
         intent.putExtras(b);
 
         startActivity(intent);
-
+        overridePendingTransition(R.anim.fade_in_two, R.anim.fade_out_two);
     }
 
 //    @Override //disables back button.

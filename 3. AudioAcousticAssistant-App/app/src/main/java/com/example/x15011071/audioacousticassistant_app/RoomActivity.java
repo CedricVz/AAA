@@ -10,16 +10,16 @@ package com.example.x15011071.audioacousticassistant_app;
  */
 
         import android.content.Intent;
-        import android.support.v7.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.view.KeyEvent;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.EditText;
-        import android.widget.RadioButton;
-        import android.widget.TextView;
-        import android.widget.Toast;
-        import java.text.DecimalFormat;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.text.DecimalFormat;
 
 
 
@@ -206,6 +206,7 @@ public class RoomActivity extends AppCompatActivity {
 //        intent.putExtras(e);//@reference Stack Overflow SetIntent & @authors
 
         startActivity(intent); //starts next intent.
+        overridePendingTransition(R.anim.fade_in_two, R.anim.fade_out_two);
     }
 
     @Override //disables back button.

@@ -97,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
                                 LoginActivity.this.startActivity(intent);
-
+                                overridePendingTransition(R.anim.fade_in_two, R.anim.fade_out_two);
 
                             } else {
                                 //If the app doesn't get the "success" response from the php files, do this.

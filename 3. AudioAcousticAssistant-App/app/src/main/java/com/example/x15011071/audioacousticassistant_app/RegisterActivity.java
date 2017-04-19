@@ -3,7 +3,7 @@ package com.example.x15011071.audioacousticassistant_app;
 /*
 * @filename RegisterActivity.java
 * @author Colin Allen, Keith Feeney, Patrick Lawlor, Fearghal McMorrow, Cedric Vecchionacce
-*  @reference YouTube - TonikamiTV/Login Register 6 part series - https://www.youtube.com/watch?v=QxffHgiJ64M
+* @reference YouTube - TonikamiTV/Login Register 6 part series - https://www.youtube.com/watch?v=QxffHgiJ64M
 * @reference Stack Overflow URL - https://stackoverflow.com/questions/5026349/how-to-open-a-website-when-a-button-is-clicked-in-android-application
 * @date 11 April 2017
  */
@@ -80,7 +80,7 @@ public class RegisterActivity extends AppCompatActivity  {
                             if (success) {
                                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                 RegisterActivity.this.startActivity(intent);
-
+                                overridePendingTransition(R.anim.fade_in_two, R.anim.fade_out_two);
                                 //else, display an error message ("Register Failed") and allow the user to try again (.setNegativeButton("Retry", null).
                                 //@reference Yotube - TonikamiTv/Login Register 6 part series & @authors
                             } else {
