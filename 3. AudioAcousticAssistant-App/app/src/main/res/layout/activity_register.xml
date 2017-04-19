@@ -98,7 +98,7 @@
                 android:layout_alignParentTop="true"
                 android:background="@android:color/background_light"
                 android:gravity="center"
-                android:text="By registering, you agree to Audio Acoustic Assistant's Terms and Conidtions. To view these Terms and Conditions, please tap here."
+                android:text="By registering, you agree to Audio Acoustic Assistant's Terms and Coniditions. To view these Terms and Conditions, please tap here."
                 android:textColor="@android:color/background_dark"
                 android:textSize="16sp" />
         </RelativeLayout>
