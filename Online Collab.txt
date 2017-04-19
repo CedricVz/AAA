@@ -2,4 +2,4 @@ Online collaboration:
 https://github.com/CedricVz/AAA/commits/master
 
 Note: Paddy was having issues with Git pushing and pulling.
-Paddy uploaded studd under Fearghal's Git and signed him name in the commits.
+Paddy uploaded his work under Fearghal's Git and signed him name in the commits.
