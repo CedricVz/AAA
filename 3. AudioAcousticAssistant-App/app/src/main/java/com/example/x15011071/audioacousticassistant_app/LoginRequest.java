@@ -9,8 +9,11 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Colin on 11/04/2017.
+/*
+* @filename LoginRequest.java
+* @author Colin Allen, Keith Feeney, Patrick Lawlor, Fearghal McMorrow, Cedric Vecchionacce
+* @date 11 April 2017
+
  */
 
 public class LoginRequest extends StringRequest {

@@ -19,16 +19,15 @@
     <!--tools:context="com.example.user.SplashActivity.RegisterActivity"-->
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="600dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:orientation="vertical"
         android:weightSum="2"
-        tools:ignore="UselessParent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        tools:ignore="UselessParent">
 
         <ImageView
             android:layout_width="match_parent"
@@ -67,35 +66,50 @@
             android:background="@android:color/darker_gray"
             android:ems="10"
             android:hint="@string/password"
+            android:inputType="textPassword"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:inputType="textPassword" />
+            android:textColor="@android:color/white" />
 
 
         <Button
-            android:text="Login"
+            android:id="@+id/bLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bLogin"
+            android:text="Login"
             android:textSize="24sp" />
 
-        <EditText
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@android:color/white"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:paddingBottom="5dp"
-            android:paddingTop="2dp"
-            android:text="@string/consent"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="14sp"
-            tools:text="I accept AudioAccousticAssistant's Terms and Conditions and informed consent" />
+            android:layout_height="51dp"
+            android:layout_weight="0.15">
 
+            <TextView
+                android:id="@+id/termsTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="11dp"
+                android:layout_weight="0.07"
+                android:background="@android:color/background_light"
+                android:text="By logging in, you agree to Audio Acoustic Assistant's Terms and Conidtions. To view these Terms and Conditions, please tap here."
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/termsLinkBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/termsTV"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent" />
+
+        </RelativeLayout>
 
 
     </LinearLayout>

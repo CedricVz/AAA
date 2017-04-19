@@ -5,10 +5,12 @@ import com.android.volley.toolbox.StringRequest;
 
 import java.util.HashMap;
 import java.util.Map;
-/**
- * Created by Colin on 11/04/2017.
- */
+/*
+* @filename RegisterRequest.java
+* @author Colin Allen, Keith Feeney, Patrick Lawlor, Fearghal McMorrow, Cedric Vecchionacce
+* @date 11 April 2017
 
+ */
 //This allows us to send a register request to the php files on the server, and recieve a string.
 public class RegisterRequest extends StringRequest {
 
@@ -19,7 +21,7 @@ public class RegisterRequest extends StringRequest {
     private Map<String, String> params;
 
     //This is the register request that is being sent to the php file using POST
-    //Response.Listener is looking to recieve the data from the RegisterActivity.java class
+    //Response.Listener is looking to receive the data from the RegisterActivity.java class
     public RegisterRequest(String email, String password, Response.Listener<String> listener) {
         super(Method.POST, REGISTER_REQUEST_URL, listener, null);
 

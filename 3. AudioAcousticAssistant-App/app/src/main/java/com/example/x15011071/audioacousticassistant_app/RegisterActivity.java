@@ -1,6 +1,15 @@
 package com.example.x15011071.audioacousticassistant_app;
 
+/*
+* @filename RegisterActivity.java
+* @author Colin Allen, Keith Feeney, Patrick Lawlor, Fearghal McMorrow, Cedric Vecchionacce
+* @reference Stack Overflow URL - https://stackoverflow.com/questions/5026349/how-to-open-a-website-when-a-button-is-clicked-in-android-application
+* @date 11 April 2017
+
+ */
+
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -18,19 +27,29 @@ import org.json.JSONObject;
 
 public class RegisterActivity extends AppCompatActivity  {
 
+    EditText etEmail, etPassword;
+    Button bRegister, termsLinkBtn;
+    String email, password;
+    RequestQueue queue;
+    RegisterRequest registerRequest;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //This line of code connects this java file to the xml file of the same name
         setContentView(R.layout.activity_register);
 
-        //these connect to the buttons within that xml file
+        etEmail = (EditText) findViewById(R.id.etEmail);
+        etPassword = (EditText) findViewById(R.id.etPassword);
 
-        final EditText etEmail = (EditText) findViewById(R.id.etEmail);
-        final EditText etPassword = (EditText) findViewById(R.id.etPassword);
+        termsLinkBtn = (Button)findViewById(R.id.termsLinkBtn);
+        termsLinkBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTermsLink();
+            }
+        });
 
-        final Button bRegister = (Button) findViewById(R.id.bRegister);
+        bRegister = (Button) findViewById(R.id.bRegister);
 
         //this connects the register button to send the data in the fields above to the RegisterRequest.java class.
         bRegister.setOnClickListener(new View.OnClickListener() {
@@ -39,8 +58,8 @@ public class RegisterActivity extends AppCompatActivity  {
 
                 //this is getting the values that the user has placed into the text areas and sending them to the RegisterRequest.java class.
 
-                final String email = etEmail.getText().toString();
-                final String password = etPassword.getText().toString();
+                email = etEmail.getText().toString();
+                password = etPassword.getText().toString();
 
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
@@ -73,9 +92,9 @@ public class RegisterActivity extends AppCompatActivity  {
                 };
 
                 //this is the code that connects the information above and sends it to the RegisterRequest.java class.
-                RegisterRequest registerRequest = new RegisterRequest(email, password,responseListener );
+                registerRequest = new RegisterRequest(email, password,responseListener );
 
-                RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
+                queue = Volley.newRequestQueue(RegisterActivity.this);
                 queue.add(registerRequest);
 
             }
@@ -90,8 +109,18 @@ public class RegisterActivity extends AppCompatActivity  {
         startActivity(intent);
     }
 
-    @Override
-    public void onBackPressed() {
-        Toast.makeText(getApplicationContext(),"Sorry, you can't go back here",Toast.LENGTH_LONG).show();
+    public void openTermsLink(){ // @reference Stack Overflow URL & @authors
+        gotToUrl("https://www.tumblr.com/policy/en/terms-of-service");
     }
+
+    public void gotToUrl(String url) { // @reference Stack Overflow URL & @authors
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
+    }
+
+//    @Override //disables back button.
+//    public void onBackPressed() { //@reference Stack Overflow Disable back button & @authors
+//        Toast.makeText(getApplicationContext(),"Sorry, you can't go back here",Toast.LENGTH_LONG).show();
+//    }
 }

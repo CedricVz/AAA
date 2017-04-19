@@ -5,7 +5,9 @@ package com.example.x15011071.audioacousticassistant_app;
 * @author Colin Allen, Keith Feeney, Patrick Lawlor, Fearghal McMorrow, Cedric Vecchionacce
 * @reference YouTube - https://www.youtube.com/watch?v=jcrh8C376-c
 * @reference StackOverflow - https://stackoverflow.com/questions/41202083/auto-stop-recording-after-seconds
-* @reference StackOverflow 2 - http://stackoverflow.com/questions/15693990/measuring-decibels-with-mobile-phone
+* @reference StackOverflow Measuring dB - http://stackoverflow.com/questions/15693990/measuring-decibels-with-mobile-phone
+* @reference YouTube - Android MediaPlayer/MediaRecorderTutorial - https://www.youtube.com/watch?v=jcrh8C376-c
+* @reference Stack Overflow SetIntent - https://stackoverflow.com/questions/6751564/how-to-pass-a-boolean-between-intents
 * @date 11 April 2017
 *
 *
@@ -30,6 +32,7 @@ import android.util.Log;
 import java.io.File;
 import java.io.IOException;
 
+
 public class RecordActivity extends AppCompatActivity {
 
     boolean youtubeRec, homeArtistRec, eventRec;
@@ -38,11 +41,11 @@ public class RecordActivity extends AppCompatActivity {
 
     Button recordBtn, nextBtn;
     TextView infoTV;
-    MediaPlayer play;
-    MediaRecorder record;
-    String FILE;
+    MediaPlayer play;//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
+    MediaRecorder record;//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
+    String FILE;//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
     Thread runner;
-    private static double maxAverage = 0.0; //
+    private static double maxAverage = 0.0;
     static final private double REFERENCE = 0.6;
 
 
@@ -52,30 +55,30 @@ public class RecordActivity extends AppCompatActivity {
         setContentView(R.layout.activity_record);
 
         //to get values from RoomActivity.java
-        final boolean youtubeRA = getIntent().getExtras().getBoolean("youtubeRA");
-        final boolean homeArtistRA = getIntent().getExtras().getBoolean("homeArtistRA");
-        final boolean eventRA = getIntent().getExtras().getBoolean("eventRA");
+        final boolean youtubeRA = getIntent().getExtras().getBoolean("youtubeRA"); //@reference Stack Overflow SetIntent & @authors
+        final boolean homeArtistRA = getIntent().getExtras().getBoolean("homeArtistRA"); //@reference Stack Overflow SetIntent & @authors
+        final boolean eventRA = getIntent().getExtras().getBoolean("eventRA"); //@reference Stack Overflow SetIntent & @authors
 
-//        Bundle c = getIntent().getExtras();
+//        Bundle c = getIntent().getExtras();//@reference Stack Overflow SetIntent & @authors
 //        final double roundedMetres = c.getDouble("roundedMetres");
 //
-//        Bundle d = getIntent().getExtras();
+//        Bundle d = getIntent().getExtras();//@reference Stack Overflow SetIntent & @authors
 //        final double emptyRoomResult = d.getDouble("emptyRoomResult");
 //
-//        Bundle e = getIntent().getExtras();
+//        Bundle e = getIntent().getExtras();//@reference Stack Overflow SetIntent & @authors
 //        final double bedroomResult = e.getDouble("bedroomResult"); //cannot have more than one Bundle, or more than one variable in Bundle
 
         youtubeRec = youtubeRA;
         homeArtistRec = homeArtistRA;
         eventRec = eventRA;
 
-        play = new MediaPlayer();
+        play = new MediaPlayer();//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial
 
-        FILE = Environment.getExternalStorageDirectory() + "/tempRecord.3gpp";
+        FILE = Environment.getExternalStorageDirectory() + "/tempRecord.3gpp";//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
         infoTV = (TextView)findViewById(R.id.infoTV);
         nextBtn = (Button)findViewById(R.id.nextBtn);
 
-        nextBtn.setVisibility(View.INVISIBLE); //nextBtn hidden until recording is complete
+        nextBtn.setVisibility(View.INVISIBLE); //nextBtn hidden until recording is complete //@authors
 
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,12 +89,12 @@ public class RecordActivity extends AppCompatActivity {
         });
 
 
-        recordBtn = (Button) findViewById(R.id.recordBtn);
+        recordBtn = (Button) findViewById(R.id.recordBtn);//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
         recordBtn.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
-                if (recordBtn.getText().toString().equals("Tap\nto\nstart\nmeasuring")) {
+                if (recordBtn.getText().toString().equals("Tap\nto\nstart\nmeasuring")) {//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
                     try {
                         startRecord();
                     } catch (Exception e) {
@@ -102,7 +105,7 @@ public class RecordActivity extends AppCompatActivity {
 //                    Toast.makeText(getApplicationContext(),Double.toString(getMaxAmp()) + " db.", Toast.LENGTH_SHORT).show();
                 }
 
-                else if (recordBtn.getText().toString().equals("Stop\nmeasuring")) {
+                else if (recordBtn.getText().toString().equals("Stop\nmeasuring")) {//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
                     stopRecord();
                     infoTV.setText("Your dB value is " + getMaxAmp() + " db.");
                     recordBtn.setText("Play");
@@ -111,7 +114,7 @@ public class RecordActivity extends AppCompatActivity {
                     nextBtn.setVisibility(View.VISIBLE);
                 }
 
-//                else if (recordBtn.getText().toString().equals("Play")) {
+//                else if (recordBtn.getText().toString().equals("Play")) {//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
 //                    try {
 //                        startPlayback();
 //                    } catch (Exception e) {
@@ -122,7 +125,7 @@ public class RecordActivity extends AppCompatActivity {
 //
 //                }
 //
-//                else if (recordBtn.getText().toString().equals("Stop\nPlayback")){
+//                else if (recordBtn.getText().toString().equals("Stop\nPlayback")){//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
 //                    try {
 //                        stopPlayback();
 //                    } catch (Exception e) {
@@ -131,7 +134,7 @@ public class RecordActivity extends AppCompatActivity {
 //                    recordBtn.setText("Record");
 //                    infoTV.setText("Tap button above to record"); //For playback and testing, not needed in app
 //                }
-                else{
+                else{ //@authors
                     Toast.makeText(getApplicationContext(),"Sorry an error occurred. Please try again", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -140,39 +143,39 @@ public class RecordActivity extends AppCompatActivity {
 
     }
 
-    public void startRecord() throws Exception{
+    public void startRecord() throws Exception{//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
         if (record != null){
             record.release();
         }
 
-        File fileOut = new File(FILE);
+        File fileOut = new File(FILE);//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
         if (fileOut != null){
             fileOut.delete();
         }
 
-        record = new MediaRecorder();
-        record.setAudioSource(MediaRecorder.AudioSource.MIC);
-        record.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-        record.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB); // 2.3.3 or below
-        record.setOutputFile(FILE);
+        record = new MediaRecorder();//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
+        record.setAudioSource(MediaRecorder.AudioSource.MIC);//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
+        record.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
+        record.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB); // 2.3.3 or below //@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
+        record.setOutputFile(FILE);//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
 
-        record.prepare();
-        record.start();
+        record.prepare();//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
+        record.start();//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
     }
 
-    public void stopRecord(){
+    public void stopRecord(){//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
         record.stop();
         record.release();
     }
 
-    public void startPlayback() throws Exception{
+    public void startPlayback() throws Exception{//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
         play.setDataSource(FILE);
         play.prepare();
         play.start();
 
         play.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
-            public void onCompletion(MediaPlayer player) {
+            public void onCompletion(MediaPlayer player) {//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
                 if (play != null) {
                     play.stop();
                     play.release();
@@ -183,7 +186,7 @@ public class RecordActivity extends AppCompatActivity {
 
     }
 
-    public void stopPlayback() throws Exception{
+    public void stopPlayback() throws Exception{//@reference YouTube - Android MediaPlayer/MediaRecorderTutorial & @authors
         if (play != null) {
             play.stop();
             play.release();
@@ -191,7 +194,7 @@ public class RecordActivity extends AppCompatActivity {
         }
     }
 
-    public double getMaxAmp(){
+    public double getMaxAmp(){//@reference StackOverflow Measuring dB & @authors
         int x = record.getMaxAmplitude();
         double x2 = x;
         double db = (20 * Math.log10(x2 / REFERENCE));
@@ -208,19 +211,18 @@ public class RecordActivity extends AppCompatActivity {
     {
         Intent intent = new Intent(this,AdviceActivity.class);
 
-        intent.putExtra("youtubeRec", youtubeRec);
-        intent.putExtra("homeArtistRec", homeArtistRec);
-        intent.putExtra("eventRec", eventRec);
-
-        Bundle d = new Bundle();
-        d.putDouble("db", getMaxAmp());
-        intent.putExtras(d);
+        intent.putExtra("youtubeRec", youtubeRec); //@reference Stack Overflow SetIntent & @authors
+        intent.putExtra("homeArtistRec", homeArtistRec); //@reference Stack Overflow SetIntent & @authors
+        intent.putExtra("eventRec", eventRec); //@reference Stack Overflow SetIntent & @authors
+        Bundle d = new Bundle(); //@reference Stack Overflow SetIntent & @authors
+        d.putDouble("db", getMaxAmp()); //@reference Stack Overflow SetIntent & @authors
+        intent.putExtras(d); //@reference Stack Overflow SetIntent & @authors
 
         startActivity(intent);
     }
 
-    @Override
-    public void onBackPressed() {
+    @Override //disables back button.
+    public void onBackPressed() { //@reference Stack Overflow Disable back button & @authors
         Toast.makeText(getApplicationContext(),"Sorry, you can't go back here",Toast.LENGTH_LONG).show();
     }
 }

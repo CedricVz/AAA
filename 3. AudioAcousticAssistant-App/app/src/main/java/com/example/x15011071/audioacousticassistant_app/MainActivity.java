@@ -1,6 +1,14 @@
 
 package com.example.x15011071.audioacousticassistant_app;
 
+/*
+* @filename MainActivity.java
+* @author Colin Allen, Keith Feeney, Patrick Lawlor, Fearghal McMorrow, Cedric Vecchionacce
+* @reference Stack Overflow Disable back button - https://stackoverflow.com/questions/4779954/disable-back-button-in-android
+* @date 11 April 2017
+
+ */
+
         import android.content.Intent;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
@@ -30,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    @Override
-    public void onBackPressed() {
+    @Override //disables back button.
+    public void onBackPressed() { //@reference Stack Overflow Disable back button & @authors
         Toast.makeText(getApplicationContext(),"Sorry, you can't go back here",Toast.LENGTH_LONG).show();
     }
 }

@@ -111,9 +111,9 @@ public class ChooseActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        Toast.makeText(getApplicationContext(),"Sorry, you can't go back here",Toast.LENGTH_LONG).show();
-    }
+//    @Override //disables back button.
+//    public void onBackPressed() { //@reference Stack Overflow Disable back button & @authors
+//        Toast.makeText(getApplicationContext(),"Sorry, you can't go back here",Toast.LENGTH_LONG).show();
+//    }
 
 }

@@ -5,8 +5,10 @@ package com.example.x15011071.audioacousticassistant_app;
 * @filename AdviceActivity.java
 * @author Colin Allen, Keith Feeney, Patrick Lawlor, Fearghal McMorrow, Cedric Vecchionacce
 * @reference Stack Overflow URL - https://stackoverflow.com/questions/5026349/how-to-open-a-website-when-a-button-is-clicked-in-android-application
-* @reference StackOverflow FB - https://stackoverflow.com/questions/4810803/open-facebook-page-from-android-app
+* @reference Stack Overflow FB - https://stackoverflow.com/questions/4810803/open-facebook-page-from-android-app
 * @reference Stack Overflow SetIntent - https://stackoverflow.com/questions/6751564/how-to-pass-a-boolean-between-intents
+* @reference Stack Overflow Change Image - https://stackoverflow.com/questions/5089300/how-can-i-change-the-image-of-an-imageview
+* @reference Stack Overflow Keycode - https://stackoverflow.com/questions/2874743/android-volume-buttons-used-in-my-application
 * @date 11 April 2017
 
  */
@@ -44,7 +46,7 @@ public class AdviceActivity extends AppCompatActivity {
 
         changingText = (TextView) findViewById(R.id.changingTextTV);
 
-        startOverBtn = (Button)findViewById(R.id.startOverBtn);
+        startOverBtn = (Button)findViewById(R.id.startOverBtn); //Button to start from the beginning
         startOverBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,12 +57,11 @@ public class AdviceActivity extends AppCompatActivity {
         imageIMG = (ImageView)findViewById(R.id.imageIMG);
 
         //to get values from RecordActivity.java
-        final boolean youtube = getIntent().getExtras().getBoolean("youtubeRec");
-        final boolean homeArtist = getIntent().getExtras().getBoolean("homeArtistRec");
-        final boolean event = getIntent().getExtras().getBoolean("eventRec");
-
-        Bundle d = getIntent().getExtras();
-        final double db = d.getDouble("db");
+        final boolean youtube = getIntent().getExtras().getBoolean("youtubeRec"); //@reference Stack Overflow SetIntent & @authors
+        final boolean homeArtist = getIntent().getExtras().getBoolean("homeArtistRec");//@reference Stack Overflow SetIntent & @authors
+        final boolean event = getIntent().getExtras().getBoolean("eventRec");//@reference Stack Overflow SetIntent & @authors
+        Bundle d = getIntent().getExtras();//@reference Stack Overflow SetIntent & @authors
+        final double db = d.getDouble("db");//@reference Stack Overflow SetIntent & @authors
 
 //Testing:
 //        Toast.makeText(getApplicationContext(),"youtube " + youtubeRec,Toast.LENGTH_SHORT).show();
@@ -76,13 +77,14 @@ public class AdviceActivity extends AppCompatActivity {
 //        homeArtist kit = bedroom + AF
 //        event kit = AF
 
-        youtubeAF = (db - (BED + GREENSCREEN)) / 20;
-        homeArtistAF = (db - GREENSCREEN) / 20;
-        eventAF = db / 20;
+        //calculations for amount of acoustic foam each user needs
+        youtubeAF = (db - (BED + GREENSCREEN)) / 20; //@authors
+        homeArtistAF = (db - GREENSCREEN) / 20; //@authors
+        eventAF = db / 20; //@authors
 
-        if (youtube == true) {
-            changingText.setText("As a YouTuber, you will need some carpet, greenscreen and " + youtubeAF + " square metres of foam. You can but the kit by clicking the image below.");
-//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (youtube == true) { //@authors
+            changingText.setText("As a YouTuber, you will need some carpet, greenscreen and " + youtubeAF + " square metres of foam. We provide a kit that you may wish to purchase. You can buy the kit by clicking the image below.");
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) { //@reference Stack Overflow Change Image & @authors
 //                imageIMG.setImageDrawable(getResources().getDrawable(R.drawable.youtubefoam, getApplicationContext().getTheme()));
 //            } else {
 //                imageIMG.setImageDrawable(getResources().getDrawable(R.drawable.youtubefoam));
@@ -90,16 +92,16 @@ public class AdviceActivity extends AppCompatActivity {
 //
 // changing image not working per result
 
-        } else if (homeArtist == true) {
-            changingText.setText("As a YouTuber, you will need some carpet " + youtubeAF + " square metres of foam. You can but the kit by clicking the image below.");
-//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        } else if (homeArtist == true) {//@authors
+            changingText.setText("As a Home Artist, you will need some carpet and " + homeArtistAF + " square metres of foam. We provide a kit that you may wish to purchase. You can buy the kit by clicking the image below.");
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {//@reference Stack Overflow Change Image & @authors
 //                imageIMG.setImageDrawable(getResources().getDrawable(R.drawable.foamhomeartist, getApplicationContext().getTheme()));
 //            } else {
 //                imageIMG.setImageDrawable(getResources().getDrawable(R.drawable.foamhomeartist));
 //            }
-        } else if (event == true) {
-            changingText.setText("As a YouTuber, you will need " + youtubeAF + " square metres of foam. You can but the kit by clicking the image below.");
-//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        } else if (event == true) {//@authors
+            changingText.setText("As an Event Organiser, you will need " + youtubeAF + " square metres of foam. We provide a kit that you may wish to purchase. You can buy the kit by clicking the image below.");
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {//@reference Stack Overflow Change Image & @authors
 //                imageIMG.setImageDrawable(getResources().getDrawable(R.drawable.foamevent, getApplicationContext().getTheme()));
 //            } else {
 //                imageIMG.setImageDrawable(getResources().getDrawable(R.drawable.foamevent));
@@ -107,7 +109,7 @@ public class AdviceActivity extends AppCompatActivity {
 
         }
 
-        urlBtn = (Button) findViewById(R.id.urlBTN);
+        urlBtn = (Button) findViewById(R.id.urlBTN);//@authors
         urlBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -125,7 +127,7 @@ public class AdviceActivity extends AppCompatActivity {
             }
         });
 
-        facebookBtn = (Button) findViewById(R.id.facebookBtn);
+        facebookBtn = (Button) findViewById(R.id.facebookBtn);//@authors
         facebookBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -151,11 +153,11 @@ public class AdviceActivity extends AppCompatActivity {
 
     public void gotToUrl(String url) { // @reference Stack Overflow URL & @authors
         Uri uriUrl = Uri.parse(url);
-        Intent lauchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-        startActivity(lauchBrowser);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
     }
 
-    public void openFacebook() { //@reference StackOverflow FB & @authors
+    public void openFacebook() { //@reference Stack Overflow FB & @authors
         try {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/1688960761404367"));
             startActivity(intent);
@@ -164,27 +166,27 @@ public class AdviceActivity extends AppCompatActivity {
         }
     }
 
-    public void startOver(){
+    public void startOver(){//@authors
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
         finish();
     }
 
 //    @Override
-//    public void onBackPressed() {
+//    public void onBackPressed() { //@reference Stack Overflow Disable back button & @authors
 //        Toast.makeText(getApplicationContext(), "Sorry, you can't go back here", Toast.LENGTH_LONG).show();
 //    } //not working separately with onKeyDown(), instead used in onKeyDown().
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
+    public boolean onKeyDown(int keyCode, KeyEvent event) {//@reference Stack Overflow Keycode & @authors
+        if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {//@reference Stack Overflow Keycode & @authors
             Toast.makeText(getApplicationContext(), "Nuh-uh, no increasing the volume! My ears hurt already!!", Toast.LENGTH_LONG).show();
             return true;
-        } else if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN){
+        } else if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN){//@reference Stack Overflow Keycode & @authors
             Toast.makeText(getApplicationContext(), "What?! You want to decrease the volume?! I can barely hear anything!", Toast.LENGTH_LONG).show();
             return true;
         }
-        else if(keyCode == KeyEvent.KEYCODE_BACK){ //KEYCODE_BACK is the Back Button.
+        else if(keyCode == KeyEvent.KEYCODE_BACK){ //KEYCODE_BACK is the Back Button. //@reference Stack Overflow Keycode & @authors
             Toast.makeText(getApplicationContext(), "Sorry, you can't go back here", Toast.LENGTH_LONG).show();
             return true;
         }
