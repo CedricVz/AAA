@@ -4,27 +4,24 @@ package com.example.x15011071.audioacousticassistant_app;
 /*
 * @filename AdviceActivity.java
 * @author Colin Allen, Keith Feeney, Patrick Lawlor, Fearghal McMorrow, Cedric Vecchionacce
-* @reference Stack Overflow URL - https://stackoverflow.com/questions/5026349/how-to-open-a-website-when-a-button-is-clicked-in-android-application
-* @reference Stack Overflow FB - https://stackoverflow.com/questions/4810803/open-facebook-page-from-android-app
+* @reference Stack Overfloow FB - https://stackoverflow.com/questions/4810803/open-facebook-page-from-android-app
 * @reference Stack Overflow SetIntent - https://stackoverflow.com/questions/6751564/how-to-pass-a-boolean-between-intents
 * @reference Stack Overflow Change Image - https://stackoverflow.com/questions/5089300/how-can-i-change-the-image-of-an-imageview
-* @reference Stack Overflow Keycode - https://stackoverflow.com/questions/2874743/android-volume-buttons-used-in-my-application
+* @reference Stack Overfloww URL - https://stackoverflow.com/questions/5026349/how-to-open-a-website-when-a-button-is-clicked-in-android-application
+* @reference Stack Overfl Keycode - https://stackoverflow.com/questions/2874743/android-volume-buttons-used-in-my-application
 * @date 11 April 2017
 
  */
 
-import android.os.Build;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
-
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 

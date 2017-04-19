@@ -5,6 +5,7 @@ package com.example.x15011071.audioacousticassistant_app;
 * @author Colin Allen, Keith Feeney, Patrick Lawlor, Fearghal McMorrow, Cedric Vecchionacce
 * @reference Stack Overflow URL - https://stackoverflow.com/questions/5026349/how-to-open-a-website-when-a-button-is-clicked-in-android-application
 * @reference Stack Overflow Disable back button - https://stackoverflow.com/questions/4779954/disable-back-button-in-android
+* @reference YouTube - TonikamiTV/Login Register 6 part series - https://www.youtube.com/watch?v=QxffHgiJ64M
 * @date 11 April 2017
 
  */
@@ -17,7 +18,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -40,8 +40,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         //these connect to the text fields/buttons within that xml file
-        etEmail = (EditText) findViewById(R.id.etEmail);
-        etPassword = (EditText) findViewById(R.id.etPassword);
+        etEmail = (EditText) findViewById(R.id.etEmail);//@reference Yotube - TonikamiTv/Login Register 6 part series & @authors
+        etPassword = (EditText) findViewById(R.id.etPassword);//@reference Yotube - TonikamiTv/Login Register 6 part series & @authors
 
         termsLinkBtn = (Button)findViewById(R.id.termsLinkBtn); //@authors
         termsLinkBtn.setOnClickListener(new View.OnClickListener() {
@@ -69,21 +69,27 @@ public class LoginActivity extends AppCompatActivity {
 //        });
 
 
-
+        //This is the listener, it listens for when the Login button is clicked
+        //When it is clicked it'll take the strings from the email text box and password textbox.(EditText)
         bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String email = etEmail.getText().toString();
-                final String password = etPassword.getText().toString();
+                final String email = etEmail.getText().toString();//@reference Yotube - TonikamiTv/Login Register 6 part series & @authors
+                final String password = etPassword.getText().toString();//@reference Yotube - TonikamiTv/Login Register 6 part series & @authors
 
+                //this is the response listener, This is listening for a response from the php file.(Login.php)
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
+                        //The response listener is waiting for a response from the php files
+                        //This response is the boolean "success"
+                        //This is done through Json, because Json can be used in both Java and Php
+                        //@reference Yotube - TonikamiTv/Login Register 6 part series & @authors
                         try {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
-
+                            //@authors
                             if (success) {
 
 
@@ -94,6 +100,9 @@ public class LoginActivity extends AppCompatActivity {
 
 
                             } else {
+                                //If the app doesn't get the "success" response from the php files, do this.
+                                //This displays an alert box to the user displaying "Login Failed".
+                                //@reference Yotube - TonikamiTv/Login Register 6 part series & @authors
                                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                                 builder.setMessage("Login Failed")
                                         .setNegativeButton("Retry", null)
