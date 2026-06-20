@@ -1,0 +1,8 @@
+{
+  "name": "Acoustic AI Assistant",
+  "short_name": "AAA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f"
+}
