@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "home studio acoustics",
     "AI acoustic assistant"
   ],
-  manifest: "/manifest.webmanifest",
+  manifest: "/site.webmanifest",
   robots: {
     index: true,
     follow: true
