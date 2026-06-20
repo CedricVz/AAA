@@ -1,0 +1,40 @@
+name: Validate Acoustic AI Assistant
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - rebuild-acoustic-ai-assistant-v2
+
+permissions:
+  contents: read
+
+concurrency:
+  group: aaa-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Typecheck and build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Build production application
+        run: npm run build
